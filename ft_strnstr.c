@@ -6,13 +6,12 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 12:10:20 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/04 14:42:03 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/05 22:47:50 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {

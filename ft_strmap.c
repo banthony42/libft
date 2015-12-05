@@ -6,11 +6,11 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 11:11:04 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/01 12:53:22 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/05 22:28:20 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
@@ -22,7 +22,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	str = NULL;
 	if (s && f)
 	{
-		str = ft_memalloc(ft_strlen(s));
+	  str = (char *)malloc(ft_strlen(s) * sizeof(char));
 		if (str == NULL)
 			return (NULL);
 		ft_strcpy(str, s);

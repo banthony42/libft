@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:25:49 by banthony          #+#    #+#             */
-/*   Updated: 2015/11/27 15:56:25 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/05 22:47:08 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnew(size_t size)
 
 	i = 0;
 	str = NULL;
-	str = malloc(size * sizeof(char));
+	str = (char *)malloc(size * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	else

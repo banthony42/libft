@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 16:40:34 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/02 12:06:49 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/05 22:31:43 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	i = ft_strlen(s1);
-	str = ft_memalloc(i + ft_strlen(s2) + 1);
+	str = (char *)ft_memalloc(i + ft_strlen(s2) + 1);
 	if (str == NULL)
 		return (NULL);
 	ft_strcpy(str, s1);
