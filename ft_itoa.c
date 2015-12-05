@@ -6,14 +6,14 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 15:59:19 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/04 20:14:47 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/05 21:37:01 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_writenbr(int nbr, char *temp, int *i)
+static	char	*ft_writenbr(int nbr, char *temp, int *i)
 {
 	if (nbr < 0)
 	{
