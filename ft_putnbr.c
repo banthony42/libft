@@ -6,11 +6,10 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 17:22:04 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/03 17:47:39 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:10:13 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	ft_putnbr(int nb)

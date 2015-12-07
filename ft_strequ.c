@@ -6,11 +6,10 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 13:52:59 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/01 16:10:46 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:23:47 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)

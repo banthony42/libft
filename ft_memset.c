@@ -6,12 +6,11 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 18:08:13 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/04 11:55:36 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:02:16 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

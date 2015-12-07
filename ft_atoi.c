@@ -6,11 +6,11 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 18:20:12 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/03 13:06:33 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 16:22:57 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_test_sign(const char *str, int i)
+static int	ft_test_sign(const char *str, int i)
 {
 	while (str[i] == '+' || str[i] == '-')
 	{
@@ -21,7 +21,7 @@ int	ft_test_sign(const char *str, int i)
 	return (i);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int i;
 	int result;

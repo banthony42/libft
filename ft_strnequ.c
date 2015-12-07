@@ -6,11 +6,10 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 16:14:00 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/04 12:31:54 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:31:06 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)

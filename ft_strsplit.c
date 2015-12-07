@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 20:27:48 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/05 21:36:38 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 15:51:35 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ static	int	word_nbr(const char *s, char c)
 	i = 0;
 	while (*s)
 	{
-		while (*s && *s== c)
+		while (*s && *s == c)
 			s++;
 		if (*s && *s != c)
 		{
-		i++;
-		while (*s && *s != c)
-			s++;
+			i++;
+			while (*s && *s != c)
+				s++;
 		}
 	}
 	return (i);
@@ -42,7 +42,7 @@ static	int	word_len(const char *s, char c)
 	return (i);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 	int		i;

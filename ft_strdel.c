@@ -6,11 +6,10 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 18:40:56 by banthony          #+#    #+#             */
-/*   Updated: 2015/11/30 18:51:59 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:17:01 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	ft_strdel(char **as)

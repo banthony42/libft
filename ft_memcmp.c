@@ -6,12 +6,11 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 15:35:12 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/03 16:54:31 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:00:18 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

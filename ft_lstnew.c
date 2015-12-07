@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 11:11:04 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 14:23:47 by banthony         ###   ########.fr       */
+/*   Created: 2015/12/07 12:17:54 by banthony          #+#    #+#             */
+/*   Updated: 2015/12/07 14:31:29 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	char	*str;
-	int		i;
+	t_list	*new;
 
-	i = 0;
-	str = NULL;
-	if (s && f)
+	new = (t_list *)malloc(sizeof(t_list));
+	if (new)
 	{
-		str = (char *)malloc(ft_strlen(s) * sizeof(char));
-		if (str == NULL)
-			return (NULL);
-		ft_strcpy(str, s);
-		while (str[i])
+		if (content == NULL)
 		{
-			str[i] = f(str[i]);
-			i++;
+			new->content = NULL;
+			new->content_size = 0;
 		}
+		else
+		{
+			new->content = (void *)content;
+			new->content_size = content_size;
+		}
+		new->next = NULL;
 	}
-	return (str);
+	return (new);
 }

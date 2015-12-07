@@ -6,11 +6,10 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:08:53 by banthony          #+#    #+#             */
-/*   Updated: 2015/11/30 14:29:55 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:33:00 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strstr(const char *s1, const char *s2)

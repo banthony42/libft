@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2015/12/04 20:26:19 by banthony         ###   ########.fr        #
+#    Updated: 2015/12/07 17:47:42 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -64,6 +64,8 @@ SRC = ./ft_putchar.c	\
 	./ft_strlcat.c	\
 	./ft_itoa.c	\
 	./ft_strsplit.c	\
+	./ft_lstnew.c	\
+	./ft_lstdelone.c	\
 
 OBJ = ./ft_putchar.o	\
 	./ft_putstr.o	\
@@ -117,34 +119,22 @@ OBJ = ./ft_putchar.o	\
 	./ft_strlcat.o	\
 	./ft_itoa.o	\
 	./ft_strsplit.o	\
+	./ft_lstnew.o	\
+	./ft_lstdelone.o	\
 
-HEAD = -I *.h
-
-TRASH = *.o		\
-	*.c~		\
-	Makefile~	\
-	*.h~		\
-	a.out		\
+HEAD = -I libft.h
 
 FLAG = -Wall -Wextra -Werror
 
-WHICH =
-
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME):
 	gcc $(FLAG) $(HEAD) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
-gcc:
-	gcc $(FLAG) $(WHICH) -L. -lft
 
-norme:
-	Norminette $(SRC) *.h Makefile
-cp:
-	cp $(SRC) ../libft
 clean:
-	rm -f $(TRASH)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)

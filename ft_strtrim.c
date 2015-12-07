@@ -6,13 +6,11 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 12:11:57 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/05 22:49:17 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 17:34:31 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strtrim(char const *s)
 {

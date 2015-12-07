@@ -6,11 +6,9 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 14:18:04 by banthony          #+#    #+#             */
-/*   Updated: 2015/11/30 17:30:33 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 16:52:26 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isdigit(int c)
 {

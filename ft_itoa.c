@@ -6,11 +6,10 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 15:59:19 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/05 21:37:01 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/07 16:54:34 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static	char	*ft_writenbr(int nbr, char *temp, int *i)
@@ -32,12 +31,12 @@ static	char	*ft_writenbr(int nbr, char *temp, int *i)
 	return (temp);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	char	temp[12];
-	char	*result;
-	int		i;
-	int		*ptr;
+	char		temp[12];
+	char		*result;
+	int			i;
+	int			*ptr;
 
 	i = 0;
 	ptr = &i;
