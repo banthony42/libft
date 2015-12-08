@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2015/12/07 17:47:42 by banthony         ###   ########.fr        #
+#    Updated: 2015/12/07 16:44:05 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -122,9 +122,17 @@ OBJ = ./ft_putchar.o	\
 	./ft_lstnew.o	\
 	./ft_lstdelone.o	\
 
-HEAD = -I libft.h
+HEAD = -I *.h
+
+TRASH = *.o		\
+	*.c~		\
+	Makefile~	\
+	*.h~		\
+	a.out		\
 
 FLAG = -Wall -Wextra -Werror
+
+WHICH =
 
 all: $(NAME)
 
@@ -132,9 +140,15 @@ $(NAME):
 	gcc $(FLAG) $(HEAD) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+gcc:
+	gcc $(FLAG) $(WHICH) -L. -lft
 
+norme:
+	Norminette $(SRC) *.h Makefile
+cp:
+	cp $(SRC) ../libft
 clean:
-	rm -f $(OBJ)
+	rm -f $(TRASH)
 
 fclean: clean
 	rm -f $(NAME)

@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 20:27:48 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 15:51:35 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/08 14:32:31 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	nbr = word_nbr(s, c);
 	tab = (char**)malloc(sizeof(char*) * nbr + 1);
+	if (tab == NULL)
+		return (NULL);
 	while (i < nbr && s[j])
 	{
 		while (s[j] == c && s[j])
