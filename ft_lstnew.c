@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 12:17:54 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 14:31:29 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/08 19:47:05 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		}
 		else
 		{
+			new->content = (void *)malloc(sizeof(content));
 			new->content = (void *)content;
 			new->content_size = content_size;
 		}

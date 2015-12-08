@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 16:14:00 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/08 14:27:47 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/08 20:02:16 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 	i = 0;
 	if (s1 == NULL || s2 == NULL)
 		return (0);
-	if (s1[i] == '\0' && n == 0)
-		return (1);
 	if (ft_strlen(s1) != ft_strlen(s2))
 		return (0);
 	if (s2[i] == '\0' && n == 0)

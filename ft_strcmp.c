@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 14:10:22 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/03 17:29:01 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/08 18:46:51 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int	ft_strcmp(const char *s1, const char *s2)
 		s1++;
 		s2++;
 	}
-	return ((unsigned char)*s1 - *s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
