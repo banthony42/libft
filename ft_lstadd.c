@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: banthony <banthony@student.42.fr>          +#+  +:+       +#+        */
+/*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/08/14 00:12:53 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/09 13:38:25 by banthony         ###   ########.fr       */
+/*   Created: 2015/12/09 17:04:56 by banthony          #+#    #+#             */
+/*   Updated: 2015/12/09 17:11:07 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	char	*ptr;
-	int		len;
-
-	len = ft_strlen(s1);
-	ptr = NULL;
-	if (s1 != 0)
-	{
-		ptr = (char *)malloc((len + 1) * sizeof(char));
-		if (ptr != NULL)
-			ft_strcpy(ptr, s1);
-		else
-			return (NULL);
-	}
-	return (ptr);
+	new->next = *alst;
+	*alst = new;
 }

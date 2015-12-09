@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 16:21:23 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 17:33:55 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/09 12:59:58 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	str = NULL;
 	if (s == NULL)
 		return (NULL);
-	str = (char *)malloc(len * sizeof(char));
+	str = (char *)malloc(len + 1 * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	while (i != len)
@@ -29,5 +29,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		str[i] = s[start + i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }

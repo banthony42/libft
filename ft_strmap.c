@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 11:11:04 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 14:23:47 by banthony         ###   ########.fr       */
+/*   Updated: 2015/12/09 12:56:21 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	str = NULL;
 	if (s && f)
 	{
-		str = (char *)malloc(ft_strlen(s) * sizeof(char));
+		str = (char *)malloc(ft_strlen(s) + 1 * sizeof(char));
 		if (str == NULL)
 			return (NULL);
 		ft_strcpy(str, s);

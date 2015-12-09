@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2015/12/07 16:44:05 by banthony         ###   ########.fr        #
+#    Updated: 2015/12/09 19:49:21 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -66,61 +66,12 @@ SRC = ./ft_putchar.c	\
 	./ft_strsplit.c	\
 	./ft_lstnew.c	\
 	./ft_lstdelone.c	\
+	./ft_lstadd.c	\
+	./ft_lstiter.c	\
+	./ft_lstdel.c	\
+	./ft_lstmap.c	\
 
-OBJ = ./ft_putchar.o	\
-	./ft_putstr.o	\
-	./ft_strcpy.o	\
-	./ft_strlen.o	\
-	./ft_putnbr.o	\
-	./ft_atoi.o	\
-	./ft_putchar_fd.o	\
-	./ft_putnbr_fd.o	\
-	./ft_putstr_fd.o	\
-	./ft_strcmp.o	\
-	./ft_strncmp.o	\
-	./ft_strncpy.o	\
-	./ft_strnstr.o	\
-	./ft_strstr.o	\
-	./ft_isalpha.o	\
-	./ft_isdigit.o	\
-	./ft_isalnum.o	\
-	./ft_isascii.o	\
-	./ft_isprint.o	\
-	./ft_toupper.o	\
-	./ft_tolower.o	\
-	./ft_putendl.o	\
-	./ft_putendl_fd.o	\
-	./ft_memset.o	\
-	./ft_bzero.o	\
-	./ft_strnew.o	\
-	./ft_memalloc.o	\
-	./ft_memdel.o	\
-	./ft_strdup.o	\
-	./ft_strdel.o	\
-	./ft_strclr.o	\
-	./ft_striter.o	\
-	./ft_striteri.o	\
-	./ft_strmap.o	\
-	./ft_strmapi.o	\
-	./ft_strequ.o	\
-	./ft_strnequ.o	\
-	./ft_strsub.o	\
-	./ft_strjoin.o	\
-	./ft_strtrim.o	\
-	./ft_strchr.o	\
-	./ft_strrchr.o	\
-	./ft_strcat.o	\
-	./ft_strncat.o	\
-	./ft_memcpy.o	\
-	./ft_memccpy.o	\
-	./ft_memmove.o	\
-	./ft_memchr.o	\
-	./ft_memcmp.o	\
-	./ft_strlcat.o	\
-	./ft_itoa.o	\
-	./ft_strsplit.o	\
-	./ft_lstnew.o	\
-	./ft_lstdelone.o	\
+OBJ= $(SRC:.c=.o)
 
 HEAD = -I *.h
 
@@ -136,8 +87,10 @@ WHICH =
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(FLAG) $(HEAD) -c $(SRC)
+%.o : %.c
+
+$(NAME): $(SRC)
+	gcc $(FLAG) $(HEAD) -c $^
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 gcc:
