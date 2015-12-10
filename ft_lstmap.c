@@ -15,33 +15,23 @@
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list *new;
-	t_list *memory;
+	t_list *temp;
 
 	new = NULL;
 	new = ft_lstnew(lst->content, lst->content_size);
-	memory = new;
-		while (lst)
+	if (new == NULL)
+		return (NULL);
+	new = f(new);
+	temp = new;
+	if (lst)
 	{
-		new = f(new);
-		lst = lst->next;
-		new->next = ft_lstnew(lst->content, lst->content_size);
-		new = new->next;
-	}
-		new->next = NULL;
-		new = memory;
+		while (lst)
+		{
+			lst = lst->next;
+			temp->next = f(lst);
+			temp = temp->next;
+		}
 		return (new);
+	}
+	return (NULL);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
