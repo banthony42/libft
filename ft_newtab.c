@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_newtab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/09 19:18:48 by banthony          #+#    #+#             */
-/*   Updated: 2016/01/22 11:04:27 by banthony         ###   ########.fr       */
+/*   Created: 2016/01/22 12:24:32 by banthony          #+#    #+#             */
+/*   Updated: 2016/01/22 16:03:10 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+char	**ft_newtab(int line, int col, int c)
 {
-	t_list *new;
-	t_list *temp;
+	int		i;
+	char	**tab;
 
-	new = NULL;
-	if (lst)
+	i = -1;
+	tab = NULL;
+	if (line < 0 || col < 0 || c < 0)
+		return (NULL);
+	if (!(tab = (char **)malloc(sizeof(char *) * line + 1)))
+		return (NULL);
+	while (++i < line)
 	{
-		new = ft_lstnew(lst->content, lst->content_size);
-		if (new == NULL)
+		if (!(tab[i] = (char *)malloc(sizeof(char) * col + 1)))
 			return (NULL);
-		new = f(new);
-		temp = new;
-		while (lst->next)
-		{
-			lst = lst->next;
-			temp->next = f(lst);
-			temp = temp->next;
-		}
-		return (new);
+		ft_memset(tab[i], c, col + 2);
+		tab[i][col] = '\n';
+		tab[i][col + 1] = '\0';
 	}
-	return (NULL);
+	tab[i] = NULL;
+	return (tab);
 }

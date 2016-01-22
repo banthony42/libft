@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2016/01/13 17:30:33 by banthony         ###   ########.fr       */
+/*   Updated: 2016/01/22 19:01:47 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,15 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void				ft_error(char *error_type);
 int					ft_open_rdly(char *file);
+void				ft_error(char *error_type);
 int					ft_close(int fd);
+void				ft_freetab(char **tab, int line);
+char				**ft_tabcpy(char **tab, int line);
+void				ft_printtab(char **tab);
+char				**ft_newtab(int line, int col, int c);
+t_list				*ft_lstlast(t_list *begin_list);
+size_t				ft_lstlen(t_list *begin_list);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));

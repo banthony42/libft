@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddback.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/09 19:18:48 by banthony          #+#    #+#             */
-/*   Updated: 2016/01/22 11:04:27 by banthony         ###   ########.fr       */
+/*   Created: 2016/01/22 16:23:12 by banthony          #+#    #+#             */
+/*   Updated: 2016/01/22 16:24:53 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+void	ft_lstaddback(t_list **list, t_list *new)
 {
-	t_list *new;
-	t_list *temp;
+	t_list	*memory;
 
-	new = NULL;
-	if (lst)
+	if (list && new)
 	{
-		new = ft_lstnew(lst->content, lst->content_size);
-		if (new == NULL)
-			return (NULL);
-		new = f(new);
-		temp = new;
-		while (lst->next)
-		{
-			lst = lst->next;
-			temp->next = f(lst);
-			temp = temp->next;
-		}
-		return (new);
+		memory = *list;
+		while (memory)
+			memory = memory->next;
+		memory->next = new;
 	}
-	return (NULL);
 }

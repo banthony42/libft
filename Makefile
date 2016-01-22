@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2016/01/13 17:36:53 by banthony         ###   ########.fr        #
+#    Updated: 2016/01/22 19:01:27 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -31,22 +31,16 @@ SRC = ./ft_putchar.c		./ft_putstr.c		./ft_strcpy.c		\
 	./ft_memcmp.c			./ft_strlcat.c		./ft_itoa.c			\
 	./ft_strsplit.c			./ft_lstnew.c		./ft_lstdelone.c	\
 	./ft_lstadd.c			./ft_lstiter.c		./ft_lstdel.c		\
-	./ft_lstmap.c			./ft_open_rdly.c	./ft_close.c		\
-	./ft_error.c 			\
+	./ft_lstmap.c			./ft_lstlen.c		./ft_lstlast.c		\
+	./ft_newtab.c			./ft_printtab.c		./ft_tabcpy.c		\
+	./ft_freetab.c			./ft_lstaddback.c	./ft_open_rdly.c	\
+	./ft_close.c			./ft_error.c							\
 
 OBJ= $(SRC:.c=.o)
 
-HEAD = -I *.h
-
-TRASH = *.o		\
-	*.c~		\
-	Makefile~	\
-	*.h~		\
-	a.out		\
+HEAD = -I ./
 
 FLAG = -Wall -Wextra -Werror
-
-WHICH =
 
 all: $(NAME)
 
@@ -56,15 +50,9 @@ $(NAME): $(SRC)
 	gcc $(FLAG) $(HEAD) -c $^
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
-gcc:
-	gcc $(FLAG) $(WHICH) -L. -lft
 
-norme:
-	Norminette $(SRC) *.h Makefile
-cp:
-	cp $(SRC) ../libft
 clean:
-	rm -f $(TRASH)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
