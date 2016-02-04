@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2016/01/22 19:01:27 by banthony         ###   ########.fr        #
+#    Updated: 2016/02/04 15:40:31 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -34,7 +34,7 @@ SRC = ./ft_putchar.c		./ft_putstr.c		./ft_strcpy.c		\
 	./ft_lstmap.c			./ft_lstlen.c		./ft_lstlast.c		\
 	./ft_newtab.c			./ft_printtab.c		./ft_tabcpy.c		\
 	./ft_freetab.c			./ft_lstaddback.c	./ft_open_rdly.c	\
-	./ft_close.c			./ft_error.c							\
+	./ft_close.c			./ft_error.c		./get_next_line.c	\
 
 OBJ= $(SRC:.c=.o)
 
