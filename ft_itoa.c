@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 15:59:19 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 16:54:34 by banthony         ###   ########.fr       */
+/*   Updated: 2016/02/09 21:17:37 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,11 @@ static	char	*ft_writenbr(int nbr, char *temp, int *i)
 char			*ft_itoa(int n)
 {
 	char		temp[12];
-	char		*result;
 	int			i;
 	int			*ptr;
 
 	i = 0;
 	ptr = &i;
-	result = NULL;
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	ft_writenbr(n, temp, ptr);

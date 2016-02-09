@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 19:58:15 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 16:57:18 by banthony         ###   ########.fr       */
+/*   Updated: 2016/02/09 21:19:07 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		if (str1[i] == c1)
 		{
 			i++;
-			return (&dest[i]);
+			dest++;
+			return (dest);
 		}
 		i++;
+		dest++;
 	}
 	return (NULL);
 }
