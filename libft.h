@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2016/02/13 18:12:32 by banthony         ###   ########.fr       */
+/*   Updated: 2016/02/15 12:50:26 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					**ft_newmap(int line, int col);
+void				*ft_memdup(const void *data, int size_data);
 char				*ft_strtrim2(char const *s);
 int					ft_open_rdly(char *file);
 void				ft_error(char *error_type);
