@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2016/02/15 13:10:15 by banthony         ###   ########.fr        #
+#    Updated: 2016/02/25 15:28:30 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -43,6 +43,12 @@ HEAD = -I ./
 
 FLAG = -Wall -Wextra -Werror
 
+TRASH = Makefile~	\
+		./*.c~		\
+		./*.h~		\
+
+WHERE =
+
 all: $(NAME)
 
 %.o : %.c
@@ -52,8 +58,13 @@ $(NAME): $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
+cp:
+	cp $(NAME) $(WHERE)
+	cp ./libft.h $(WHERE)
+
 clean:
 	rm -f $(OBJ)
+	rm -f $(TRASH)
 
 fclean: clean
 	rm -f $(NAME)
