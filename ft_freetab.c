@@ -6,12 +6,13 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 14:54:22 by banthony          #+#    #+#             */
-/*   Updated: 2016/02/24 19:12:14 by banthony         ###   ########.fr       */
+/*   Updated: 2016/03/09 18:54:05 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 void	ft_freetab(char **tab)
 {
@@ -24,7 +25,5 @@ void	ft_freetab(char **tab)
 		tab[i] = NULL;
 		i++;
 	}
-	printf("line:%d, with adr:%p\n", i, tab[i]);
-	free(tab);
 	tab = NULL;
 }

@@ -6,14 +6,14 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/13 18:27:13 by banthony          #+#    #+#             */
-/*   Updated: 2016/02/03 16:42:36 by banthony         ###   ########.fr       */
+/*   Updated: 2016/03/09 16:00:28 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE 8
+# define BUFF_SIZE 4096
 # define END_LINE '\n'
 # define MAX_FD 256
 

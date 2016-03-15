@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2016/02/25 15:28:30 by banthony         ###   ########.fr        #
+#    Updated: 2016/02/25 15:30:46 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -61,6 +61,7 @@ $(NAME): $(SRC)
 cp:
 	cp $(NAME) $(WHERE)
 	cp ./libft.h $(WHERE)
+	cp ./get_next_line.h $(WHERE)
 
 clean:
 	rm -f $(OBJ)
