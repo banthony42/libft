@@ -6,16 +6,16 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 10:35:26 by banthony          #+#    #+#             */
-/*   Updated: 2016/04/22 13:40:01 by banthony         ###   ########.fr       */
+/*   Updated: 2016/04/26 10:34:39 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int	count(unsigned int unb, int base)
+int		count(unsigned int unb, int base)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (unb == 0)
@@ -30,10 +30,10 @@ int	count(unsigned int unb, int base)
 
 char	*ft_itoa_base(int value, int base)
 {
-	unsigned int    unb;
-	int                sign;
-	int                i;
-	char            *res;
+	unsigned int	unb;
+	int				sign;
+	int				i;
+	char			*res;
 
 	sign = 0;
 	if (value >= 0)
@@ -64,7 +64,7 @@ char	*ft_itoa_base(int value, int base)
 	return (res);
 }
 
-int main(void)
+int		main(void)
 {
 	printf("%s\n", ft_itoa_base(2147483647, 10));
 	printf("%s\n", ft_itoa_base(-2147483648, 10));

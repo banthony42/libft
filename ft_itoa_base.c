@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 10:35:40 by banthony          #+#    #+#             */
-/*   Updated: 2016/04/22 15:19:00 by banthony         ###   ########.fr       */
+/*   Updated: 2016/04/26 10:34:22 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ char	*ft_itoa_base(int value, int base)
 	len = numb_len(&value, base, &sign, &val);
 	if (!(numb = (char*)malloc((len + 1) * sizeof(char))))
 		return (NULL);
-//	printf("len:%d\n", len);
 	numb[len] = '\0';
 	if (val == 0)
 		numb[len - 1] = '0';
