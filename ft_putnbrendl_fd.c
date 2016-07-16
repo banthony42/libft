@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_putnbrendl_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
+/*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 16:41:53 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/16 23:09:08 by banthony         ###   ########.fr       */
+/*   Created: 2016/04/30 13:54:33 by banthony          #+#    #+#             */
+/*   Updated: 2016/04/30 14:08:37 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	ft_memdel(void **ap)
+void	ft_putnbrendl_fd(int nb, int fd)
 {
-	if (ap != NULL)
-	{
-		if (*ap == NULL)
-			return ;
-		free(*ap);
-		*ap = NULL;
-	}
+	ft_putnbr_fd(nb, fd);
+	ft_putchar_fd('\n', fd);
 }
