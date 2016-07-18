@@ -6,21 +6,24 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2016/07/16 18:36:39 by banthony         ###   ########.fr        #
+#    Updated: 2016/07/18 09:04:10 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = libft.a
 
-SRC = ./ft_putchar.c		./ft_putstr.c			./ft_strcpy.c			\
-	./ft_strlen.c			./ft_putnbr.c			./ft_atoi.c				\
+SRC =./ft_atoi.c			./ft_atol.c				./ft_atoll.c			\
+	./ft_bzero.c			./ft_close.c			./ft_closedir.c			\
+	./ft_opendir.c 			./ft_lstat.c									\
+	./ft_putchar.c			./ft_putstr.c			./ft_strcpy.c			\
+	./ft_strlen.c			./ft_putnbr.c									\
 	./ft_putchar_fd.c		./ft_putnbr_fd.c		./ft_putstr_fd.c		\
 	./ft_strcmp.c			./ft_strncmp.c			./ft_strncpy.c			\
 	./ft_strnstr.c			./ft_strstr.c			./ft_isalpha.c			\
 	./ft_isdigit.c			./ft_isalnum.c			./ft_isascii.c			\
 	./ft_isprint.c			./ft_toupper.c			./ft_tolower.c			\
 	./ft_putendl.c			./ft_putendl_fd.c		./ft_memset.c			\
-	./ft_bzero.c			./ft_strnew.c			./ft_memalloc.c			\
+	./ft_strnew.c			./ft_memalloc.c			\
 	./ft_memdel.c			./ft_strdup.c			./ft_strdel.c			\
 	./ft_strclr.c			./ft_striter.c			./ft_striteri.c			\
 	./ft_strmap.c			./ft_strmapi.c			./ft_strequ.c			\
@@ -34,7 +37,7 @@ SRC = ./ft_putchar.c		./ft_putstr.c			./ft_strcpy.c			\
 	./ft_lstmap.c			./ft_lstlen.c			./ft_lstlast.c			\
 	./ft_newtab.c			./ft_printtab.c			./ft_tabcpy.c			\
 	./ft_freetab.c			./ft_lstaddback.c		./ft_open_rdly.c		\
-	./ft_close.c			./ft_error.c			./get_next_line.c		\
+	./ft_error.c			./get_next_line.c		\
 	./ft_strtrim2.c			./ft_newmap.c			./ft_putspace.c			\
 	./ft_putspace_fd.c		./ft_putnbrendl.c		./ft_putnbrendl_fd.c	\
 	./ft_putnbrspace.c		./ft_putnbrspace_fd.c	\

@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
+/*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 18:20:12 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 08:18:29 by banthony         ###   ########.fr       */
+/*   Created: 2016/07/18 08:23:55 by banthony          #+#    #+#             */
+/*   Updated: 2016/07/18 08:25:20 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** DESCRIPTION:
-** La fonction ft_atoi convertit la chaine pointee par str
-** en entier de type, int.
+** La fonction ft_atoll convertit la chaine pointee par str
+** en entier de type, long long.
 **
 ** VALEUR RENVOYEE:
 ** Le resultat de la conversion.
 **
 ** NOTES:
-** Aussi disponible, atol et atoll convertissent la chaine pointee
-** par str, respectivement en entier de type long et long long.
+** Dans la lib, atoi et atol convertissent la chaine pointee
+** par str, respectivement en entier de type int et long.
 */
 
 static int	ft_test_sign(const char *str, int i)
@@ -34,11 +34,11 @@ static int	ft_test_sign(const char *str, int i)
 	return (i);
 }
 
-int			ft_atoi(const char *str)
+long long	ft_atoll(const char *str)
 {
-	int i;
-	int result;
-	int correc;
+	int			i;
+	long long	result;
+	long long	correc;
 
 	i = 0;
 	result = 0;
