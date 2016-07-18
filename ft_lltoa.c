@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_lltoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
+/*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/04 15:59:19 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 11:34:26 by banthony         ###   ########.fr       */
+/*   Created: 2016/07/18 11:25:34 by banthony          #+#    #+#             */
+/*   Updated: 2016/07/18 11:35:49 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 /*
 ** DESCRIPTIONS:
 ** Alloue (avec malloc(3)) et retourne une chaine de caractères
-** “fraiche” terminée par un ’\0’ représentant l’entier n de type int passé
-** en paramètre. Les nombres négatifs doivent être gérés. Si l’allocation
-** échoue, la fonction renvoie NULL.
+** “fraiche” terminée par un ’\0’ représentant l’entier n de type long long
+** passé en paramètre. Les nombres négatifs doivent être gérés.
+**  Si l’allocation échoue, la fonction renvoie NULL.
 **
 ** VALEUR RENVOYEE:
 ** La chaine de caractères représentant l’entier passé en paramètre.
 */
 
-static	char	*ft_writenbr(int nbr, char *temp, int *i)
+static	char	*ft_writenbr(long long nbr, char *temp, int *i)
 {
 	if (nbr < 0)
 	{
@@ -42,7 +42,7 @@ static	char	*ft_writenbr(int nbr, char *temp, int *i)
 	return (temp);
 }
 
-char			*ft_itoa(int n)
+char			*ft_lltoa(long long n)
 {
 	char		temp[255];
 	int			i;

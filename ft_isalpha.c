@@ -6,9 +6,13 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:35:14 by banthony          #+#    #+#             */
-/*   Updated: 2015/11/26 14:19:15 by banthony         ###   ########.fr       */
+/*   Updated: 2016/07/18 11:03:35 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Verifie si l'on a un caractere alphabetique
+*/
 
 int	ft_isalpha(int c)
 {

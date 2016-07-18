@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 16:18:58 by banthony          #+#    #+#             */
-/*   Updated: 2016/01/13 17:42:59 by banthony         ###   ########.fr       */
+/*   Updated: 2016/07/18 11:33:05 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	ft_open_rdly(char *file)
 
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
-		ft_error("error during open");
+		ft_exit("error during open", 0);
 	return (fd);
 }

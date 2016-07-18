@@ -6,9 +6,13 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 14:37:37 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 16:51:45 by banthony         ###   ########.fr       */
+/*   Updated: 2016/07/18 11:02:39 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Verifie si l'on a un caractere alphanumerique
+*/
 
 #include "libft.h"
 

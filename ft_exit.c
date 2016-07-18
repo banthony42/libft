@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_exit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/14 19:35:34 by banthony          #+#    #+#             */
-/*   Updated: 2016/01/13 17:28:29 by banthony         ###   ########.fr       */
+/*   Created: 2016/07/18 10:03:17 by banthony          #+#    #+#             */
+/*   Updated: 2016/07/18 10:03:26 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_error(char *error_type)
+/*
+** Fonction exit qui termine un processus et affiche le message
+** passe en parametre avant de sortir.
+*/
+
+void	ft_exit(char *exit_msg, int status)
 {
-	ft_putstr(error_type);
+	ft_putendl(exit_msg);
 	ft_putchar('\n');
-	exit(0);
+	exit(status);
 }
