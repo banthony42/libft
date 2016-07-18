@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/13 19:32:36 by banthony         ###   ########.fr       */
+/*   Updated: 2016/07/17 15:45:15 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
-void				ft_putnbr(int nb);
+void				ft_putnbr(long long nb);
 void				ft_putnbrendl(int nb);
 void				ft_putnbrspace(int nb);
 void				ft_putchar_fd(char c, int fd);
