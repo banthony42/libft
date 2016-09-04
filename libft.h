@@ -6,13 +6,14 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2016/09/04 15:59:28 by banthony         ###   ########.fr       */
+/*   Updated: 2016/09/04 18:49:04 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+# include <dirent.h>
 # include "get_next_line.h"
 
 typedef	struct		s_list
@@ -22,15 +23,31 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_atoi(const char *str);
+long				ft_atol(const char *str);
+long long			ft_atoll(const char *str);
+void				ft_bzero(void *s, size_t n);
+int					ft_close(int fd);
+int					ft_closedir(DIR *dir);
+void				ft_exit(char *exit_msg, int status);
+void				ft_freetab(char **tab);
+int					ft_isalpha(int c);
+int					ft_isdigit(int c);
+int					ft_isalnum(int c);
+int					ft_isascii(int c);
+int					ft_isprint(int c);
+char				*ft_itoa(int n);
+char				*ft_ltoa(long n);
+char				*ft_lltoa(long long n);
+/*
+** DEBUT commentaire sur fonction et coup de jeune au code
+*/
 int					**ft_newmap(int line, int col);
 char				*ft_strtrim2(char const *s);
 int					ft_open_rdly(char *file);
-void				ft_error(char *error_type);
-int					ft_close(int fd);
-void				ft_freetab(char **tab);
 char				**ft_tabcpy(char **tab, int line);
 void				ft_printtab(char **tab,
-								void (*f)(const char *s), char *str);
+								void (*f)(const char *s), char *str);;
 char				**ft_newtab(int line, int col, int c);
 t_list				*ft_lstlast(t_list *begin_list);
 size_t				ft_lstlen(t_list *begin_list);
@@ -57,7 +74,6 @@ void				ft_putspace(char const *s);
 void				ft_putspace_fd(char const *s, int fd);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
-void				ft_bzero(void *s, size_t n);
 void				ft_memdel(void **ap);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
@@ -84,19 +100,12 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strncat(char *dest, const char *src, size_t n);
-char				*ft_itoa(int n);
 char				**ft_strsplit(char const *s, char c);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-int					ft_atoi(const char *str);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-int					ft_isalpha(int c);
-int					ft_isdigit(int c);
-int					ft_isalnum(int c);
-int					ft_isascii(int c);
-int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 #endif
