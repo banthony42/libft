@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 14:54:22 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 10:47:42 by banthony         ###   ########.fr       */
+/*   Updated: 2016/09/06 19:32:04 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ void	ft_freetab(char **tab)
 	int	i;
 
 	i = 0;
+	if (tab == NULL)
+		return ;
 	while (tab[i] != NULL)
 	{
-		free(tab[i]);
-		tab[i] = NULL;
+		ft_strdel(&tab[i]);
 		i++;
 	}
+	free(tab);
 	tab = NULL;
 }
