@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2016/09/07 19:21:11 by banthony         ###   ########.fr        #
+#    Updated: 2016/09/07 20:32:17 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -51,7 +51,7 @@ SRC =./ft_atoi.c			./ft_atol.c				./ft_atoll.c			\
 	./ft_strsplit.c			./ft_lstnew.c			./ft_lstdelone.c		\
 	./ft_lstadd.c			./ft_lstiter.c			./ft_lstdel.c			\
 	./ft_lstmap.c			./ft_lstlen.c			./ft_lstlast.c			\
-	./ft_newtab.c			./ft_printtab.c			./ft_tabcpy.c			\
+	./ft_newtab.c			./ft_printtab.c			./ft_tabdup.c			\
 	./ft_freetab.c			./ft_lstaddback.c		./ft_open_rdly.c		\
 	./ft_exit.c				./get_next_line.c		./ft_putnbrspace_fd.c	\
 	./ft_strtrim2.c			./ft_newmap.c			./ft_putspace.c			\
