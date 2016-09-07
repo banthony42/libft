@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/22 14:54:22 by banthony          #+#    #+#             */
-/*   Updated: 2016/09/06 19:32:04 by banthony         ###   ########.fr       */
+/*   Updated: 2016/09/07 20:18:41 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	ft_freetab(char **tab)
 {

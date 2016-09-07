@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2016/09/04 18:49:04 by banthony         ###   ########.fr       */
+/*   Updated: 2016/09/07 20:17:50 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,11 @@ char				*ft_lltoa(long long n);
 /*
 ** DEBUT commentaire sur fonction et coup de jeune au code
 */
+int					ft_tablen(char **tab);
 int					**ft_newmap(int line, int col);
 char				*ft_strtrim2(char const *s);
 int					ft_open_rdly(char *file);
-char				**ft_tabcpy(char **tab, int line);
+char				**ft_tabcpy(char **tab);
 void				ft_printtab(char **tab,
 								void (*f)(const char *s), char *str);;
 char				**ft_newtab(int line, int col, int c);

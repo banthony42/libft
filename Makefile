@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2016/07/18 11:24:07 by banthony         ###   ########.fr        #
+#    Updated: 2016/09/07 19:21:11 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -56,6 +56,7 @@ SRC =./ft_atoi.c			./ft_atol.c				./ft_atoll.c			\
 	./ft_exit.c				./get_next_line.c		./ft_putnbrspace_fd.c	\
 	./ft_strtrim2.c			./ft_newmap.c			./ft_putspace.c			\
 	./ft_putspace_fd.c		./ft_putnbrendl.c		./ft_putnbrendl_fd.c	\
+	./ft_tablen.c	\
 
 OBJ= $(SRC:.c=.o)
 

@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabcpy.c                                        :+:      :+:    :+:   */
+/*   ft_tablen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/22 13:16:44 by banthony          #+#    #+#             */
-/*   Updated: 2016/09/07 20:10:01 by banthony         ###   ########.fr       */
+/*   Created: 2016/09/07 19:19:36 by banthony          #+#    #+#             */
+/*   Updated: 2016/09/07 19:20:32 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdlib.h"
 
-char	**ft_tabcpy(char **tab)
+int	ft_tablen(char **tab)
 {
-	int		i;
-	int		len;
-	char	**tab2;
+	int i;
 
 	i = 0;
-	tab2 = NULL;
-	len = ft_tablen(tab);
-	if (!(tab2 = (char **)malloc(sizeof(char *) * len + 1)))
-		return (NULL);
-	while (i < len)
-	{
-		if (!(tab2[i] = ft_strdup(tab[i])))
-			return (NULL);
+	if (tab == NULL)
+		return (0);
+	while (tab[i] != NULL)
 		i++;
-	}
-	tab2[len] = NULL;
-	return (tab2);
+	return (i);
 }
