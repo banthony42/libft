@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabadd.c                                        :+:      :+:    :+:   */
+/*   ft_tabtolst.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/07 20:38:52 by banthony          #+#    #+#             */
-/*   Updated: 2016/09/08 18:24:34 by banthony         ###   ########.fr       */
+/*   Created: 2016/09/08 18:23:35 by banthony          #+#    #+#             */
+/*   Updated: 2016/09/08 18:23:51 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
-
-char	**ft_tabadd(char **tab, char *elmt)
+int	ft_tabtolst(char **tab, t_list **lst)
 {
-	int		i;
-	int		len;
-	char	**tab2;
+	int	i;
 
-	i = 0;
-	tab2 = NULL;
-	len = ft_tablen(tab);
-	if (!(tab2 = (char **)malloc(sizeof(char*) * (len + 2))))
-		return (NULL);
-	while (i < len)
+	i = 1;
+	if ((*lst) != NULL)
+		return (-1);
+	if (((*lst) = ft_lstnew((void*)tab[0], ft_strlen(tab[0]))) == NULL)
+		return (-1);
+	while (tab[i] != NULL)
 	{
-		if (!(tab2[i] = ft_strdup(tab[i])))
-			return (NULL);
+		ft_lstaddback(lst, ft_lstnew((void*)tab[i], ft_strlen(tab[i])));
 		i++;
 	}
-	if (!(tab2[i] = ft_strdup(elmt)))
-		return (NULL);
-	tab2[i + 1] = NULL;
-	ft_freetab(tab);
-	return (tab2);
+	return (0);
 }
