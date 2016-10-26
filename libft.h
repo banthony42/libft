@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2016/10/26 18:32:32 by banthony         ###   ########.fr       */
+/*   Updated: 2016/10/26 20:07:35 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ char				*ft_lltoa(long long n);
 ** CI DESSUS DEBUT commentaire sur fonction et coup de jeune au code
 */
 
+char				*ft_strfill(char *str, char c);
 char				**ft_tabtrim(char **tab);
 void				ft_strjoin_replace(char **dest, char *src);
 char				**ft_tabadd(char **tab, char *elmt);
