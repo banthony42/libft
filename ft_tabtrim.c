@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_replace.c                               :+:      :+:    :+:   */
+/*   ft_tabtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/21 19:25:09 by banthony          #+#    #+#             */
-/*   Updated: 2016/10/17 19:15:44 by banthony         ###   ########.fr       */
+/*   Created: 2016/10/26 18:24:48 by banthony          #+#    #+#             */
+/*   Updated: 2016/10/26 19:11:48 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	ft_strjoin_replace(char **dest, char *src)
+char	**ft_tabtrim(char **tab)
 {
-	char *tmp;
+	int		i;
+	int		len;
+	char	**tab2;
 
-	tmp = NULL;
-	tmp = ft_strjoin(*dest, src);
-	ft_strdel(dest);
-	*dest = ft_strdup(tmp);
-	ft_strdel(&tmp);
+	i = 0;
+	len = ft_tablen(tab);
+	tab2 = NULL;
+	if (!(tab2 = (char **)malloc(sizeof(char *) * (len + 1))))
+		return (NULL);
+	while (i < len)
+	{
+		if (!(tab2[i] = ft_strtrim(tab[i])))
+			return (NULL);
+		i++;
+	}
+	tab2[i] = NULL;
+	ft_freetab(tab);
+	return (tab2);
 }
