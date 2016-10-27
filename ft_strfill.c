@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/26 19:43:31 by banthony          #+#    #+#             */
-/*   Updated: 2016/10/26 20:12:49 by banthony         ###   ########.fr       */
+/*   Updated: 2016/10/27 16:09:39 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,11 @@ char *ft_strfill(char *str, char c)
 	i2 = 0;
 	new = ft_strtrim(str);
 	final = ft_strnew(ft_strlen(new));
-	if (c)
-		;
-	while (new[i])
+	while (new[i] != '\0')
 	{
 		if (new[i] == ' ' || new[i] == '\t' || new[i] == '\n')
 		{
-			final[i2] = 48;
+			final[i2] = c;
 			i2++;
 			skip_blank(new, &i);
 		}

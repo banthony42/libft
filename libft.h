@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2016/10/26 20:07:35 by banthony         ###   ########.fr       */
+/*   Updated: 2016/10/27 15:23:37 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void				ft_lstaddback(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
-void				ft_putchar(char c);
+void				ft_putchar(char const c);
 void				ft_putstr(char const *s);
 void				ft_putnbr(long long nb);
 void				ft_putnbrendl(int nb);

@@ -6,13 +6,13 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:28:48 by banthony          #+#    #+#             */
-/*   Updated: 2015/11/24 11:43:41 by banthony         ###   ########.fr       */
+/*   Updated: 2016/10/27 15:23:16 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putchar(char const c)
 {
 	write(1, &c, 1);
 }
