@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 18:40:56 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 17:17:01 by banthony         ###   ########.fr       */
+/*   Updated: 2017/05/04 19:37:30 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_strdel(char **as)
 {
-	ft_memdel((void**)&*as);
+	ft_memdel((void**)as);
 }

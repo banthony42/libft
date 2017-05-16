@@ -6,11 +6,18 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 19:25:09 by banthony          #+#    #+#             */
-/*   Updated: 2016/10/17 19:15:44 by banthony         ###   ########.fr       */
+/*   Updated: 2017/04/13 22:36:50 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** La fonction concatene dest et src, et remplace le resultat a l'adresse.
+** pointee par dest, tout en liberant proprement la memoire.
+** Permet de contourner le probleme de leaks de cette utilisation de ft_strjoin:
+** dest = ft_strjoin(dest, src)
+*/
 
 void	ft_strjoin_replace(char **dest, char *src)
 {
