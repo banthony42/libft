@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/26 19:43:31 by banthony          #+#    #+#             */
-/*   Updated: 2016/10/27 16:09:39 by banthony         ###   ########.fr       */
+/*   Updated: 2017/06/20 19:26:55 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 
 static void	skip_blank(char const *str, int *i)
 {
-	while(str[*i] == ' ' || str[*i] == '\t' || str[*i] == '\n')
+	while (str[*i] == ' ' || str[*i] == '\t' || str[*i] == '\n')
 		*i += 1;
 }
 
-char *ft_strfill(char *str, char c)
+char		*ft_strfill(char *str, char c)
 {
 	int		i;
 	int		i2;
@@ -57,15 +57,3 @@ char *ft_strfill(char *str, char c)
 	ft_strdel(&final);
 	return (new);
 }
-
-
-
-
-
-
-
-
-
-
-
-

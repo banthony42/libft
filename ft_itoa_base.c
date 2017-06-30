@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 10:35:40 by banthony          #+#    #+#             */
-/*   Updated: 2016/04/26 10:34:22 by banthony         ###   ########.fr       */
+/*   Updated: 2017/06/20 22:43:00 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,9 @@ char	*ft_itoa_base(int value, int base)
 	return (numb);
 }
 
-int		main(void)
+
+/*
+ int		main(void)
 {
 	printf("%s\n", ft_itoa_base(2147483647, 10));
 	printf("%s\n", ft_itoa_base(2147483647, 16));
@@ -84,3 +86,4 @@ int		main(void)
 	printf("%s\n", ft_itoa_base(-78423655, 10));
 	return (0);
 }
+*/

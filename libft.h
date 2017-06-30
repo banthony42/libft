@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2016/10/27 15:23:37 by banthony         ###   ########.fr       */
+/*   Updated: 2017/06/30 20:09:35 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@
 # include <dirent.h>
 # include "get_next_line.h"
 
+# define WHITE "\033[0m"
+# define RED "\033[31m"
+# define GREEN "\033[32m"
+# define YELLOW "\033[33m"
+# define BLUE "\033[34m"
+# define PINK "\033[35m"
+# define CYAN "\033[36m"
+# define GREY "\033[37m"
+
 typedef	struct		s_list
 {
 	void			*content;
@@ -23,6 +32,8 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+void				ft_putendlcol(char *color, char *str);
+void				ft_putstrcol(char *color, char *str);
 int					ft_atoi(const char *str);
 long				ft_atol(const char *str);
 long long			ft_atoll(const char *str);
@@ -43,6 +54,7 @@ char				*ft_lltoa(long long n);
 ** CI DESSUS DEBUT commentaire sur fonction et coup de jeune au code
 */
 
+char				*ft_itoa_base(int value, int base);
 char				*ft_strfill(char *str, char c);
 char				**ft_tabtrim(char **tab);
 void				ft_strjoin_replace(char **dest, char *src);
@@ -53,7 +65,7 @@ char				*ft_strtrim2(char const *s);
 int					ft_open_rdly(char *file);
 char				**ft_tabdup(char **tab);
 void				ft_printtab(char **tab,
-								void (*f)(const char *s), char *str);;
+								void (*f)(const char *s), char *str);
 char				**ft_newtab(int line, int col, int c);
 t_list				*ft_lstlast(t_list *begin_list);
 size_t				ft_lstlen(t_list *begin_list);

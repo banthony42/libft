@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putstrcol.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
+/*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 18:08:13 by banthony          #+#    #+#             */
-/*   Updated: 2017/06/20 19:25:21 by banthony         ###   ########.fr       */
+/*   Created: 2017/06/20 19:21:58 by banthony          #+#    #+#             */
+/*   Updated: 2017/06/20 19:25:41 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_putstrcol(char *color, char *str)
 {
-	unsigned char	*temp;
-	size_t			i;
-
-	temp = (unsigned char *)b;
-	i = 0;
-	while (i < len)
-	{
-		temp[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
+	ft_putstr(color);
+	ft_putstr(str);
+	ft_putstr(WHITE);
 }

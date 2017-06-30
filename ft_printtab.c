@@ -23,7 +23,7 @@ void	ft_printtab(char **tab, void (*f)(const char *s), char *str)
 	{
 		if (tab[i] == NULL)
 			return ;
-		if ((f && str) && tab[i] != NULL)
+		if ((f && str) && tab[i] != NULL && i)
 			f(str);
 		ft_putstr(tab[i]);
 		i++;
