@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/06/20 22:42:40 by banthony         ###   ########.fr        #
+#    Updated: 2017/07/30 19:02:30 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -82,7 +82,7 @@ $(NAME): $(SRC)
 	ranlib $(NAME)
 
 debug: $(SRC)
-	gcc $(FLAG) $(HEAD) -c $^ -g3 -fsanitize=address
+	gcc $(FLAG) $(HEAD) -c $^ -g
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

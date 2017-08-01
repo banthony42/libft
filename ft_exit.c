@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/18 10:03:17 by banthony          #+#    #+#             */
-/*   Updated: 2017/05/16 17:33:14 by banthony         ###   ########.fr       */
+/*   Updated: 2017/07/30 13:47:57 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 void	ft_exit(char *exit_msg, int status)
 {
-	ft_putendl(exit_msg);
+	if (exit_msg != NULL)
+		ft_putendl(exit_msg);
 	exit(status);
 }
