@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2017/06/30 20:09:35 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/04 16:20:32 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "get_next_line.h"
 
 # define WHITE "\033[0m"
+# define BLACK "\033[30m"
 # define RED "\033[31m"
 # define GREEN "\033[32m"
 # define YELLOW "\033[33m"
@@ -24,6 +25,15 @@
 # define PINK "\033[35m"
 # define CYAN "\033[36m"
 # define GREY "\033[37m"
+
+# define B_WHITE "\033[40m"
+# define B_RED "\033[41m"
+# define B_GREEN "\033[42m"
+# define B_YELLOW "\033[43m"
+# define B_BLUE "\033[44m"
+# define B_PINK "\033[45m"
+# define B_CYAN "\033[46m"
+# define B_GREY "\033[47m"
 
 typedef	struct		s_list
 {
@@ -34,6 +44,7 @@ typedef	struct		s_list
 
 void				ft_putendlcol(char *color, char *str);
 void				ft_putstrcol(char *color, char *str);
+void				ft_putstrcol_fd(char const *s, int fd, char *color);
 int					ft_atoi(const char *str);
 long				ft_atol(const char *str);
 long long			ft_atoll(const char *str);
