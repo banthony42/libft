@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 10:35:40 by banthony          #+#    #+#             */
-/*   Updated: 2017/06/20 22:43:00 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/08 17:48:19 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,25 +65,3 @@ char	*ft_itoa_base(int value, int base)
 		numb[0] = '-';
 	return (numb);
 }
-
-
-/*
- int		main(void)
-{
-	printf("%s\n", ft_itoa_base(2147483647, 10));
-	printf("%s\n", ft_itoa_base(2147483647, 16));
-	printf("%s\n", ft_itoa_base(-2147483648, 10));
-	printf("%s\n", ft_itoa_base(0, 2));
-	printf("%s\n", ft_itoa_base(-0, 10));
-	printf("%s\n", ft_itoa_base(0, 16));
-	printf("%s\n", ft_itoa_base(42, 10));
-	printf("%s\n", ft_itoa_base(-42, 10));
-	printf("%s\n", ft_itoa_base(42, 2));
-	printf("%s\n", ft_itoa_base(-42, 2));
-	printf("%s\n", ft_itoa_base(-42, 16));
-	printf("%s\n", ft_itoa_base(15, 16));
-	printf("%s\n", ft_itoa_base(42442, 10));
-	printf("%s\n", ft_itoa_base(-78423655, 10));
-	return (0);
-}
-*/
