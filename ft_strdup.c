@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/14 00:12:53 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/01 21:48:16 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/09 16:26:03 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*ft_strdup(const char *s1)
 {
 	char	*ptr;
-	int		len;
+	size_t	len;
 
 	len = ft_strlen(s1);
 	ptr = NULL;

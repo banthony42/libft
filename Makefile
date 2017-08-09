@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/08/04 16:07:13 by banthony         ###   ########.fr        #
+#    Updated: 2017/08/09 16:35:38 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -86,10 +86,19 @@ debug: $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-cp:
+wevery: $(SRC)
+	gcc $(FLAG) -Weverything $(HEAD) -c $^
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+cp:		#Copie la libft vers le PATH renseigne dans la var WHERE
 	cp $(NAME) $(WHERE)
 	cp ./libft.h $(WHERE)
 	cp ./get_next_line.h $(WHERE)
+
+fix:	#Compilation personnalise
+	norminette $(WHERE)
+	gcc $(FLAG) $(HEAD) $(WHERE)
 
 clean:
 	rm -f $(OBJ)

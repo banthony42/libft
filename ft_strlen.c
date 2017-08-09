@@ -6,11 +6,12 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:24:58 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/01 21:25:36 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/09 16:32:18 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

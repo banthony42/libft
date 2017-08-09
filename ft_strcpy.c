@@ -6,9 +6,11 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:54:51 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 17:16:24 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/09 16:31:24 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {
