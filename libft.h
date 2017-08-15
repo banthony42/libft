@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/04 16:20:32 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/15 16:27:25 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+void				ft_putchar_base(char c, unsigned int base, char *tab);
+void				ft_print_memory(void *addr, size_t size);
 void				ft_putendlcol(char *color, char *str);
 void				ft_putstrcol(char *color, char *str);
 void				ft_putstrcol_fd(char const *s, int fd, char *color);
