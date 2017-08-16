@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/17 01:31:31 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 01:48:04 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,11 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void				ft_putchar_base(unsigned char c, unsigned int base,
-									char *tab);
-void				ft_print_memory(void *addr, size_t size);
-void				ft_putendlcol(char *color, char *str);
-void				ft_putstrcol(char *color, char *str);
-void				ft_putstrcol_fd(char const *s, int fd, char *color);
+
+/*
+** DEBUT Fonctions revue et ajout de commentaires
+*/
+
 int					ft_atoi(const char *str);
 long				ft_atol(const char *str);
 long long			ft_atoll(const char *str);
@@ -65,10 +64,17 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 char				*ft_itoa(int n);
 char				*ft_ltoa(long n);
+
 /*
-** CI DESSUS DEBUT commentaire sur fonction et coup de jeune au code
+** FIN Fonctions revue et ajout de commentaires
 */
 
+void				ft_putchar_base(unsigned char c, unsigned int base,
+									char *tab);
+void				ft_print_memory(void *addr, size_t size);
+void				ft_putendlcol(char *color, char *str);
+void				ft_putstrcol(char *color, char *str);
+void				ft_putstrcol_fd(char const *s, int fd, char *color);
 int					ft_rgbtohexa(const int red, const int green, const int blue);
 int					ft_tabtolst(char **tab, t_list **lst);
 char				*ft_itoa_base(int value, int base);

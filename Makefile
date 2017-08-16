@@ -6,29 +6,11 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/08/17 01:43:14 by banthony         ###   ########.fr        #
+#    Updated: 2017/08/17 01:46:30 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = libft.a
-
-# Fonction revue et ajout de commentaires Libft:
-#		./ft_atoi.c
-#		./ft_atol.c
-#		./ft_atoll.c
-#		./ft_bzero.c
-#		./ft_close.c
-#		./ft_closedir.c
-#		./ft_exit.c
-#		./ft_freetab.c
-#		./ft_isalnum.c
-#		./ft_isalpha.c
-#		./ft_isascii.c
-#		./ft_isdigit.c
-#		./ft_isprint.c
-#		./ft_itoa.c
-#		./ft_ltoa.c
-#		./ft_lltoa.c
 
 SRC =	./ft_atoi.c				\
 	./ft_atol.c					\
@@ -131,7 +113,7 @@ OBJ= $(SRC:.c=.o)
 
 HEAD = -I ./
 
-FLAG = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror -Weverything
 
 TRASH = Makefile~	\
 		./*.c~		\
@@ -153,8 +135,8 @@ debug: $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-wevery: $(SRC)
-	gcc $(FLAG) -Weverything $(HEAD) -c $^ #-g3 -fsanitize=address
+sanit: $(SRC)
+	gcc $(FLAG) $(HEAD) -c $^ -g3 -fsanitize=address
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
