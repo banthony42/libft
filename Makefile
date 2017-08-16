@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/08/17 01:29:29 by banthony         ###   ########.fr        #
+#    Updated: 2017/08/17 01:43:14 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -88,6 +88,7 @@ SRC =	./ft_atoi.c				\
 	./ft_putstrcol.c			\
 	./ft_putstrcol_fd.c			\
 	./ft_putstr_fd.c			\
+	./ft_rgbtohexa.c			\
 	./ft_strcat.c				\
 	./ft_strchr.c				\
 	./ft_strclr.c				\
@@ -124,7 +125,6 @@ SRC =	./ft_atoi.c				\
 	./ft_tabtrim.c				\
 	./ft_tolower.c				\
 	./ft_toupper.c				\
-	./ft_rgbtohexa.c			\
 
 
 OBJ= $(SRC:.c=.o)
