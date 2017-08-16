@@ -6,9 +6,11 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 14:10:22 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/08 18:46:51 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:14:33 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

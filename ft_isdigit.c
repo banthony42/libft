@@ -6,13 +6,15 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 14:18:04 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 11:05:49 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 00:43:48 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Verifie si l'on a un chiffre (0 a 9)
 */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

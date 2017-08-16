@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/18 11:25:24 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 11:29:07 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:51:02 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static	char	*ft_writenbr(long nbr, char *temp, int *i)
 		temp = ft_writenbr(nbr % 10, temp, i);
 	}
 	else
-		temp[*i] = nbr + '0';
+		temp[*i] = (char)(nbr + '0');
 	return (temp);
 }
 

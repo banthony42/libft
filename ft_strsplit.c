@@ -6,16 +6,16 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 20:27:48 by banthony          #+#    #+#             */
-/*   Updated: 2017/06/20 19:26:11 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 21:49:00 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static	int	word_nbr(const char *s, char c)
+static	size_t	word_nbr(const char *s, char c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (*s)
@@ -32,9 +32,9 @@ static	int	word_nbr(const char *s, char c)
 	return (i);
 }
 
-static	int	word_len(const char *s, char c)
+static	size_t	word_len(const char *s, char c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != c && s[i])
@@ -42,12 +42,12 @@ static	int	word_len(const char *s, char c)
 	return (i);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
-	int		i;
-	int		j;
-	int		nbr;
+	size_t	i;
+	size_t	j;
+	size_t	nbr;
 
 	i = 0;
 	j = 0;

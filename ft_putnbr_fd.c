@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 17:44:43 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 17:11:31 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:16:43 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ void	ft_putnbr_fd(int nb, int fd)
 			ft_putnbr_fd(nb % 10, fd);
 		}
 		else
-			ft_putchar_fd(nb + '0', fd);
+			ft_putchar_fd((char)(nb + '0'), fd);
 	}
 }

@@ -6,13 +6,15 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 14:50:46 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 11:05:05 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 00:43:57 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Verifie si c est un unsigned char rentrant dans la table ASCII
 */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

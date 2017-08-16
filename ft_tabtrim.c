@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/26 18:24:48 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/09 00:22:16 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 21:33:36 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	**ft_tabtrim(char **tab)
 {
-	int		i;
-	int		len;
+	size_t	i;
+	size_t	len;
 	char	**tab2;
 
 	i = 0;

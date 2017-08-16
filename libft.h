@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/16 20:52:04 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 00:51:24 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 # include <string.h>
 # include <dirent.h>
+# include <sys/types.h>
+# include <sys/stat.h>
 # include "get_next_line.h"
 
 # define WHITE "\033[0m"
@@ -54,7 +56,7 @@ long long			ft_atoll(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_close(int fd);
 int					ft_closedir(DIR *dir);
-void				ft_exit(char *exit_msg, int status);
+void				ft_exit(char *exit_msg, int status)__attribute__((noreturn));
 void				ft_freetab(char **tab);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -63,7 +65,6 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 char				*ft_itoa(int n);
 char				*ft_ltoa(long n);
-char				*ft_lltoa(long long n);
 /*
 ** CI DESSUS DEBUT commentaire sur fonction et coup de jeune au code
 */
@@ -73,10 +74,12 @@ char				*ft_strfill(char *str, char c);
 char				**ft_tabtrim(char **tab);
 void				ft_strjoin_replace(char **dest, char *src);
 char				**ft_tabadd(char **tab, char *elmt);
-int					ft_tablen(char **tab);
+size_t				ft_tablen(char **tab);
 int					**ft_newmap(int line, int col);
 char				*ft_strtrim2(char const *s);
-int					ft_open_rdly(char *file);
+int					ft_lstat(char *path, struct stat *s_stat);
+int					ft_openfile(const char *file, int oflag);
+void				ft_opendir(DIR **folder, const char *path);
 char				**ft_tabdup(char **tab);
 void				ft_printtab(char **tab,
 								void (*f)(const char *s), char *str);

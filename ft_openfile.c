@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_open_rdly.c                                     :+:      :+:    :+:   */
+/*   ft_openfile.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: banthony <banthony@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/10 16:18:58 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 11:33:05 by banthony         ###   ########.fr       */
+/*   Created: 2017/08/16 22:27:35 by banthony          #+#    #+#             */
+/*   Updated: 2017/08/16 22:27:42 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 #include <fcntl.h>
 #include "libft.h"
 
-int	ft_open_rdly(char *file)
+int	ft_openfile(const char *file, int oflag)
 {
 	int fd;
 
-	fd = open(file, O_RDONLY);
+	fd = open(file, oflag);
 	if (fd < 0)
 		ft_exit("error during open", 0);
 	return (fd);

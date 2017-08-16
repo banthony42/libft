@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 11:14:42 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/05 22:43:05 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 00:53:01 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	temp = NULL;
 	i = 0;
-	str1 = (unsigned char *)src;
+	str1 = (unsigned char *)(unsigned long)src;
 	str2 = (unsigned char *)dest;
-	temp = (unsigned char *)ft_memalloc(n);
-	if (temp == NULL)
+	if (!(temp = (unsigned char *)ft_memalloc(n)))
 		return (NULL);
 	while (i < n)
 	{
@@ -39,5 +38,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		i++;
 	}
 	free(temp);
-	return (dest);
+	return ((void*)dest);
 }

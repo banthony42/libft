@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 12:10:20 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 17:31:58 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:04:50 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	check = ft_strlen(s2);
 	index = 0;
 	if (!s2[0])
-		return ((char *)s1);
+		return ((char *)(unsigned long)s1);
 	if (n < check)
 		return (NULL);
 	while (index < n && s1[index] != '\0')
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 			if (index + index2 >= n)
 				return (NULL);
 			if (index2 == check - 1)
-				return ((char*)&s1[index]);
+				return ((char*)(unsigned long)&s1[index]);
 			index2++;
 		}
 		index++;

@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:55:13 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/09 12:58:34 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:12:53 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
-	int		i;
+	char			*str;
+	unsigned int	i;
 
 	i = 0;
 	str = NULL;

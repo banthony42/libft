@@ -6,13 +6,14 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/08/15 16:45:19 by banthony         ###   ########.fr        #
+#    Updated: 2017/08/16 22:57:45 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = libft.a
 
-#22SRC =	./ft_atoi.c
+# Fonction revue et ajout de commentaires Libft:
+#		./ft_atoi.c
 #		./ft_atol.c
 #		./ft_atoll.c
 #		./ft_bzero.c
@@ -30,32 +31,31 @@ NAME = libft.a
 #		./ft_lltoa.c
 
 SRC =	./ft_atoi.c				\
-	./ft_atol.c				\
+	./ft_atol.c					\
 	./ft_atoll.c				\
 	./ft_bzero.c				\
 	./ft_close.c				\
 	./ft_closedir.c				\
-	./ft_exit.c				\
+	./ft_exit.c					\
 	./ft_freetab.c				\
 	./ft_isalnum.c				\
 	./ft_isalpha.c				\
 	./ft_isascii.c				\
 	./ft_isdigit.c				\
 	./ft_isprint.c				\
-	./ft_itoa_base.c				\
-	./ft_itoa.c				\
-	./ft_lltoa.c				\
-	./ft_lstaddback.c				\
+	./ft_itoa_base.c			\
+	./ft_itoa.c					\
+	./ft_lstaddback.c			\
 	./ft_lstadd.c				\
 	./ft_lstat.c				\
 	./ft_lstdel.c				\
-	./ft_lstdelone.c				\
+	./ft_lstdelone.c			\
 	./ft_lstiter.c				\
 	./ft_lstlast.c				\
 	./ft_lstlen.c				\
 	./ft_lstmap.c				\
 	./ft_lstnew.c				\
-	./ft_ltoa.c				\
+	./ft_ltoa.c					\
 	./ft_memalloc.c				\
 	./ft_memccpy.c				\
 	./ft_memchr.c				\
@@ -67,27 +67,27 @@ SRC =	./ft_atoi.c				\
 	./ft_newmap.c				\
 	./ft_newtab.c				\
 	./ft_opendir.c				\
-	./ft_open_rdly.c				\
-	./ft_print_memory.c				\
+	./ft_openfile.c				\
+	./ft_print_memory.c			\
 	./ft_printtab.c				\
-	./ft_putchar_base.c				\
+	./ft_putchar_base.c			\
 	./ft_putchar.c				\
-	./ft_putchar_fd.c				\
+	./ft_putchar_fd.c			\
 	./ft_putendl.c				\
-	./ft_putendlcol.c				\
-	./ft_putendl_fd.c				\
+	./ft_putendlcol.c			\
+	./ft_putendl_fd.c			\
 	./ft_putnbr.c				\
-	./ft_putnbrendl.c				\
-	./ft_putnbrendl_fd.c				\
-	./ft_putnbr_fd.c				\
-	./ft_putnbrspace.c				\
-	./ft_putnbrspace_fd.c				\
+	./ft_putnbrendl.c			\
+	./ft_putnbrendl_fd.c		\
+	./ft_putnbr_fd.c			\
+	./ft_putnbrspace.c			\
+	./ft_putnbrspace_fd.c		\
 	./ft_putspace.c				\
-	./ft_putspace_fd.c				\
+	./ft_putspace_fd.c			\
 	./ft_putstr.c				\
-	./ft_putstrcol.c				\
-	./ft_putstrcol_fd.c				\
-	./ft_putstr_fd.c				\
+	./ft_putstrcol.c			\
+	./ft_putstrcol_fd.c			\
+	./ft_putstr_fd.c			\
 	./ft_strcat.c				\
 	./ft_strchr.c				\
 	./ft_strclr.c				\
@@ -100,7 +100,7 @@ SRC =	./ft_atoi.c				\
 	./ft_striter.c				\
 	./ft_striteri.c				\
 	./ft_strjoin.c				\
-	./ft_strjoin_replace.c				\
+	./ft_strjoin_replace.c		\
 	./ft_strlcat.c				\
 	./ft_strlen.c				\
 	./ft_strmap.c				\
@@ -155,7 +155,7 @@ debug: $(SRC)
 	ranlib $(NAME)
 
 wevery: $(SRC)
-	gcc $(FLAG) -Weverything $(HEAD) -c $^
+	gcc $(FLAG) -Weverything $(HEAD) -c $^ -g3 -fsanitize=address
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

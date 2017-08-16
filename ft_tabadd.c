@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/07 20:38:52 by banthony          #+#    #+#             */
-/*   Updated: 2016/09/08 18:24:34 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 21:34:23 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	**ft_tabadd(char **tab, char *elmt)
 {
-	int		i;
-	int		len;
+	size_t	i;
+	size_t	len;
 	char	**tab2;
 
 	i = 0;

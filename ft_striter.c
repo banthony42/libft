@@ -6,9 +6,11 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 19:05:25 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 17:19:37 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:14:04 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

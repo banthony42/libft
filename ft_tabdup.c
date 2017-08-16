@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/07 20:31:02 by banthony          #+#    #+#             */
-/*   Updated: 2016/09/08 16:42:27 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 00:51:43 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	**ft_tabdup(char **tab)
 {
-	int		i;
-	int		len;
+	size_t	i;
+	size_t	len;
 	char	**tab2;
 
 	i = 0;

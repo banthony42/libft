@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/18 11:25:34 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 11:35:49 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 01:06:28 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,19 @@ char			*ft_lltoa(long long n)
 	char		temp[255];
 	int			i;
 	int			*ptr;
+	char		*ret;
 
 	i = 0;
+	ret = NULL;
 	ptr = &i;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	ft_writenbr(n, temp, ptr);
-	temp[i + 1] = '\0';
+	if (n == -9223372036854775808)
+		ret = ft_strdup("-9223372036854775808");
+	else
+	{
+		ft_writenbr(n, temp, ptr);
+		temp[i + 1] = '\0';
+		if (!(ret = ft_strdup(temp)))
+			return (NULL);
+	}
 	return (ft_strdup(temp));
 }

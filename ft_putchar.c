@@ -6,11 +6,12 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:28:48 by banthony          #+#    #+#             */
-/*   Updated: 2016/10/27 15:23:16 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:18:06 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar(char const c)
 {

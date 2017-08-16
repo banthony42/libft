@@ -6,13 +6,13 @@
 /*   By: banthony <banthony@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/15 14:39:40 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/16 19:48:59 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:18:53 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	print_char(unsigned char *adr, size_t i, size_t size)
+static void	print_char(unsigned char *adr, size_t i, size_t size)
 {
 	size_t	n;
 	size_t	max;
@@ -24,7 +24,7 @@ void	print_char(unsigned char *adr, size_t i, size_t size)
 		if (n < size)
 		{
 			if (adr[n] > 31 && adr[n] < 127)
-				ft_putchar(adr[n]);
+				ft_putchar((char)adr[n]);
 			else
 				ft_putchar('.');
 		}
@@ -32,7 +32,7 @@ void	print_char(unsigned char *adr, size_t i, size_t size)
 	}
 }
 
-void	print_hex(unsigned char *adr, size_t i, size_t size)
+static void	print_hex(unsigned char *adr, size_t i, size_t size)
 {
 	size_t	n;
 	size_t	max;
@@ -51,7 +51,7 @@ void	print_hex(unsigned char *adr, size_t i, size_t size)
 	}
 }
 
-void	ft_print_memory(void *addr, size_t size)
+void		ft_print_memory(void *addr, size_t size)
 {
 	unsigned char	*adr;
 	size_t			i;

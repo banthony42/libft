@@ -6,13 +6,15 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:55:45 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 17:19:52 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:13:45 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
 	if (s && f)

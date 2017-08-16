@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 17:22:53 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/16 19:50:01 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 00:52:37 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-			return ((char *)&s[i]);
+			return ((char *)(unsigned long)&s[i]);
 		i++;
 	}
 	if (s[i] == c)
-		return ((char *)&s[i]);
+		return ((char *)(unsigned long)&s[i]);
 	else
 		return (NULL);
 }

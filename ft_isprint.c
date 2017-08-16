@@ -6,13 +6,15 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:13:53 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 11:06:30 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 00:43:35 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Verifie si l'on a un caractere imprimable espace compris
 */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

@@ -6,15 +6,15 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/07 19:19:36 by banthony          #+#    #+#             */
-/*   Updated: 2016/09/07 19:20:32 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 21:32:32 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tablen(char **tab)
+size_t	ft_tablen(char **tab)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	if (tab == NULL)

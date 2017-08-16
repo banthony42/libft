@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 15:59:19 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 11:34:26 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 01:02:30 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static	char	*ft_writenbr(int nbr, char *temp, int *i)
 		temp = ft_writenbr(nbr % 10, temp, i);
 	}
 	else
-		temp[*i] = nbr + '0';
+		temp[*i] = (char)(nbr + '0');
 	return (temp);
 }
 
@@ -47,12 +47,19 @@ char			*ft_itoa(int n)
 	char		temp[255];
 	int			i;
 	int			*ptr;
+	char		*ret;
 
 	i = 0;
 	ptr = &i;
+	ret = NULL;
 	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	ft_writenbr(n, temp, ptr);
-	temp[i + 1] = '\0';
-	return (ft_strdup(temp));
+		ret = ft_strdup("-2147483648");
+	else
+	{
+		ft_writenbr(n, temp, ptr);
+		temp[i + 1] = '\0';
+		if (!(ret = ft_strdup(temp)))
+			return (NULL);
+	}
+	return (ret);
 }

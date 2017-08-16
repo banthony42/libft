@@ -6,13 +6,10 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/18 09:06:28 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 09:09:44 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:55:45 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <stdio.h>
 #include <unistd.h>
 #include "libft.h"
 
@@ -22,9 +19,6 @@ int		ft_lstat(char *path, struct stat *s_stat)
 
 	ret = 0;
 	if ((ret = lstat(path, s_stat)) < 0)
-	{
-		ft_putstr("ft_ls: ");
-		perror(path);
-	}
+		ft_exit("Erreur lstat", 42);
 	return (ret);
 }

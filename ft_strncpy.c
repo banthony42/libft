@@ -6,11 +6,12 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 12:39:35 by banthony          #+#    #+#             */
-/*   Updated: 2015/12/07 17:29:41 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:05:06 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {

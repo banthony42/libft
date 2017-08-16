@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 18:20:12 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/18 08:18:29 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 00:49:33 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 ** Aussi disponible, atol et atoll convertissent la chaine pointee
 ** par str, respectivement en entier de type long et long long.
 */
+
+#include "libft.h"
 
 static int	ft_test_sign(const char *str, int i)
 {

@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 17:22:04 by banthony          #+#    #+#             */
-/*   Updated: 2016/07/17 15:44:54 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 22:17:29 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	ft_putnbr(long long nb)
 		ft_putnbr(nb % 10);
 	}
 	else
-		ft_putchar(nb + '0');
+		ft_putchar((char)(nb + '0'));
 }
