@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/17 00:51:24 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 01:31:31 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ char				*ft_ltoa(long n);
 ** CI DESSUS DEBUT commentaire sur fonction et coup de jeune au code
 */
 
+int					ft_rgbtohexa(const int red, const int green, const int blue);
+int					ft_tabtolst(char **tab, t_list **lst);
 char				*ft_itoa_base(int value, int base);
 char				*ft_strfill(char *str, char c);
 char				**ft_tabtrim(char **tab);

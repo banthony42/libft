@@ -6,7 +6,7 @@
      By: banthony <banthony@student.42.fr>          +#+  +:+       +#+
                                                   +#+#+#+#+#+   +#+
      Created: 2017/08/16 21:55:30 by banthony          #+#    #+#
-     Updated: 2017/08/16 22:49:05 by banthony         ###   ########.fr         
+     Updated: 2017/08/17 01:12:03 by banthony         ###   ########.fr         
 
 ********************************************************************************
 
@@ -26,7 +26,7 @@ qu’un souvenir pour vous.
 
 Problemes de cast avec les const char
   -  char	*ft_strrchr(const char *s, int c);
-  -	 char	*ft_strstr(const char *s1, const char *s2);
+  -  char	*ft_strstr(const char *s1, const char *s2);
   -  char	*ft_strnstr(const char *s1, const char *s2, size_t n);
   -  char	*ft_strchr(const char *s, int c);
   -  void	*ft_memmove(void *dest, const void *src, size_t n);

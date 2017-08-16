@@ -6,9 +6,11 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/08 18:23:35 by banthony          #+#    #+#             */
-/*   Updated: 2016/09/08 18:23:51 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/17 01:15:45 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tabtolst(char **tab, t_list **lst)
 {

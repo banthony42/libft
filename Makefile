@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/08/16 22:57:45 by banthony         ###   ########.fr        #
+#    Updated: 2017/08/17 01:29:29 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -120,12 +120,11 @@ SRC =	./ft_atoi.c				\
 	./ft_tabadd.c				\
 	./ft_tabdup.c				\
 	./ft_tablen.c				\
+	./ft_tabtolst.c				\
 	./ft_tabtrim.c				\
 	./ft_tolower.c				\
 	./ft_toupper.c				\
-
-#	./hexa_rgb.c				\
-#	./ft_tabtolst.c				\
+	./ft_rgbtohexa.c			\
 
 
 OBJ= $(SRC:.c=.o)
@@ -155,7 +154,7 @@ debug: $(SRC)
 	ranlib $(NAME)
 
 wevery: $(SRC)
-	gcc $(FLAG) -Weverything $(HEAD) -c $^ -g3 -fsanitize=address
+	gcc $(FLAG) -Weverything $(HEAD) -c $^ #-g3 -fsanitize=address
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
