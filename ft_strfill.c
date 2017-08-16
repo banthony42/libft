@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/26 19:43:31 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/08 17:49:35 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 19:50:38 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,11 @@ char		*ft_strfill(char *str, char c)
 	{
 		if (new[i] == ' ' || new[i] == '\t' || new[i] == '\n')
 		{
-			final[i2] = c;
-			i2++;
+			final[i2++] = c;
 			skip_blank(new, &i);
 		}
 		else
-		{
-			final[i2] = new[i];
-			i2++;
-			i++;
-		}
+			final[i2++] = new[i++];
 	}
 	final[i2] = '\0';
 	ft_strdel(&new);

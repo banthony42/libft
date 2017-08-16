@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 17:22:53 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/09 16:38:30 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 19:50:01 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ char	*ft_strchr(const char *s, int c)
 	else
 		return (NULL);
 }
-
-
-
-
-
-
-
-
-
-

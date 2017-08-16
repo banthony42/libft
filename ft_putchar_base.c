@@ -6,16 +6,16 @@
 /*   By: banthony <banthony@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/15 14:39:40 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/15 16:26:01 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/16 19:49:22 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_base(char c, unsigned int base, char *tab)
+void	ft_putchar_base(unsigned char c, unsigned int base, char *tab)
 {
 	if (!tab || !base)
 		return ;
-	ft_putchar(tab[c/base]);
-	ft_putchar(tab[c%base]);
+	ft_putchar(tab[c / base]);
+	ft_putchar(tab[c % base]);
 }
