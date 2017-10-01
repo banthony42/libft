@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/17 01:48:04 by banthony         ###   ########.fr       */
+/*   Updated: 2017/10/01 13:19:58 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 char				*ft_itoa(int n);
 char				*ft_ltoa(long n);
-
+void				ft_print_ptr(void *addr);
 /*
 ** FIN Fonctions revue et ajout de commentaires
 */

@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/15 14:39:40 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/16 22:18:53 by banthony         ###   ########.fr       */
+/*   Updated: 2017/08/26 14:20:31 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,8 @@ static void	print_char(unsigned char *adr, size_t i, size_t size)
 static void	print_hex(unsigned char *adr, size_t i, size_t size)
 {
 	size_t	n;
-	size_t	max;
 
 	n = i;
-	max = i + 16;
 	while (n < i + 16)
 	{
 		if (n < size)

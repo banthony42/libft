@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/08/17 01:46:30 by banthony         ###   ########.fr        #
+#    Updated: 2017/10/01 13:15:04 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -51,6 +51,7 @@ SRC =	./ft_atoi.c				\
 	./ft_opendir.c				\
 	./ft_openfile.c				\
 	./ft_print_memory.c			\
+	./ft_print_ptr.c			\
 	./ft_printtab.c				\
 	./ft_putchar_base.c			\
 	./ft_putchar.c				\
@@ -113,7 +114,7 @@ OBJ= $(SRC:.c=.o)
 
 HEAD = -I ./
 
-FLAG = -Wall -Wextra -Werror -Weverything
+FLAG = -Wall -Wextra -Werror #-Weverything
 
 TRASH = Makefile~	\
 		./*.c~		\
