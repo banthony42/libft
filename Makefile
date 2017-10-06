@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/10/01 13:15:04 by banthony         ###   ########.fr        #
+#    Updated: 2017/10/03 13:26:54 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -114,7 +114,7 @@ OBJ= $(SRC:.c=.o)
 
 HEAD = -I ./
 
-FLAG = -Wall -Wextra -Werror #-Weverything
+FLAG = -Wall -Wextra -Werror -Weverything
 
 TRASH = Makefile~	\
 		./*.c~		\

@@ -6,16 +6,12 @@
 /*   By: banthony <banthony@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 13:19:19 by banthony          #+#    #+#             */
-/*   Updated: 2017/10/01 13:19:22 by banthony         ###   ########.fr       */
+/*   Updated: 2017/10/06 20:16:17 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-**	n = 3 pour sauter les premieres valeurs toujours egale a zero.
-**	Pourquoi ?
-*/
+#include <stdio.h>
 
 void	ft_print_ptr(void *addr)
 {
@@ -25,12 +21,11 @@ void	ft_print_ptr(void *addr)
 
 	size = sizeof(addr);
 	adr = (unsigned char*)&addr;
-	n = 3;
+	n = 5;
 	ft_putstr("0x");
-	while (n < 16)
+	while (n <= size)
 	{
-		if (n <= size)
-			ft_putchar_base(adr[size - n], 16, "0123456789abcdef");
+		ft_putchar_base(adr[size - n], 16, "0123456789abcdef");
 		n++;
 	}
 }
