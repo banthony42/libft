@@ -6,11 +6,13 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/10/03 13:26:54 by banthony         ###   ########.fr        #
+#    Updated: 2017/11/14 15:07:24 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = libft.a
+
+NAME_SANIT = libft_sanit.a
 
 SRC =	./ft_atoi.c				\
 	./ft_atol.c					\
@@ -122,9 +124,11 @@ TRASH = Makefile~	\
 
 WHERE =
 
+%.o : %.c
+
 all: $(NAME)
 
-%.o : %.c
+sanit:$(NAME_SANIT)
 
 $(NAME): $(SRC)
 	gcc $(FLAG) $(HEAD) -c $^
@@ -136,10 +140,10 @@ debug: $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-sanit: $(SRC)
+$(NAME_SANIT): $(SRC)
 	gcc $(FLAG) $(HEAD) -c $^ -g3 -fsanitize=address
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	ar rc $(NAME_SANIT) $(OBJ)
+	ranlib $(NAME_SANIT)
 
 cp:		#Copie la libft vers le PATH renseigne dans la var WHERE
 	cp $(NAME) $(WHERE)
@@ -155,6 +159,6 @@ clean:
 	rm -f $(TRASH)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(NAME_SANIT)
 
 re: fclean all

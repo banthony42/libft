@@ -6,14 +6,14 @@
 /*   By: banthony <banthony@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/01 13:19:19 by banthony          #+#    #+#             */
-/*   Updated: 2017/10/06 20:16:17 by banthony         ###   ########.fr       */
+/*   Updated: 2017/10/07 13:04:05 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	ft_print_ptr(void *addr)
+void	ft_print_ptr(void const *addr)
 {
 	unsigned char	*adr;
 	size_t			size;

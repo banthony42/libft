@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 18:20:12 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/17 00:49:33 by banthony         ###   ########.fr       */
+/*   Updated: 2017/11/08 16:05:44 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 
 #include "libft.h"
 
-static int	ft_test_sign(const char *str, int i)
+static long	ft_test_sign(const char *str, long i)
 {
 	while (str[i] == '+' || str[i] == '-')
 	{
@@ -38,9 +38,9 @@ static int	ft_test_sign(const char *str, int i)
 
 int			ft_atoi(const char *str)
 {
-	int i;
-	int result;
-	int correc;
+	long i;
+	long result;
+	long correc;
 
 	i = 0;
 	result = 0;
@@ -53,11 +53,11 @@ int			ft_atoi(const char *str)
 	i = ft_test_sign(str, i);
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 48 && str[i] <= 57)
+		if (str[i] >= '0' && str[i] <= '9')
 			result = (result * 10) + (str[i] - 48);
 		if (str[i] > '9' || str[i] < '0')
-			return (result * correc);
+			return ((int)(result * correc));
 		i++;
 	}
-	return (result * correc);
+	return ((int)(result * correc));
 }
