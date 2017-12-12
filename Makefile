@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/11/14 15:07:24 by banthony         ###   ########.fr        #
+#    Updated: 2017/12/12 18:05:07 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -14,113 +14,118 @@ NAME = libft.a
 
 NAME_SANIT = libft_sanit.a
 
-SRC =	./ft_atoi.c				\
-	./ft_atol.c					\
-	./ft_atoll.c				\
-	./ft_bzero.c				\
-	./ft_close.c				\
-	./ft_closedir.c				\
-	./ft_exit.c					\
-	./ft_freetab.c				\
-	./ft_isalnum.c				\
-	./ft_isalpha.c				\
-	./ft_isascii.c				\
-	./ft_isdigit.c				\
-	./ft_isprint.c				\
-	./ft_itoa_base.c			\
-	./ft_itoa.c					\
-	./ft_lstaddback.c			\
-	./ft_lstadd.c				\
-	./ft_lstat.c				\
-	./ft_lstdel.c				\
-	./ft_lstdelone.c			\
-	./ft_lstiter.c				\
-	./ft_lstlast.c				\
-	./ft_lstlen.c				\
-	./ft_lstmap.c				\
-	./ft_lstnew.c				\
-	./ft_ltoa.c					\
-	./ft_memalloc.c				\
-	./ft_memccpy.c				\
-	./ft_memchr.c				\
-	./ft_memcmp.c				\
-	./ft_memcpy.c				\
-	./ft_memdel.c				\
-	./ft_memmove.c				\
-	./ft_memset.c				\
-	./ft_newmap.c				\
-	./ft_newtab.c				\
-	./ft_opendir.c				\
-	./ft_openfile.c				\
-	./ft_print_memory.c			\
-	./ft_print_ptr.c			\
-	./ft_printtab.c				\
-	./ft_putchar_base.c			\
-	./ft_putchar.c				\
-	./ft_putchar_fd.c			\
-	./ft_putendl.c				\
-	./ft_putendlcol.c			\
-	./ft_putendl_fd.c			\
-	./ft_putnbr.c				\
-	./ft_putnbrendl.c			\
-	./ft_putnbrendl_fd.c		\
-	./ft_putnbr_fd.c			\
-	./ft_putnbrspace.c			\
-	./ft_putnbrspace_fd.c		\
-	./ft_putspace.c				\
-	./ft_putspace_fd.c			\
-	./ft_putstr.c				\
-	./ft_putstrcol.c			\
-	./ft_putstrcol_fd.c			\
-	./ft_putstr_fd.c			\
-	./ft_rgbtohexa.c			\
-	./ft_strcat.c				\
-	./ft_strchr.c				\
-	./ft_strclr.c				\
-	./ft_strcmp.c				\
-	./ft_strcpy.c				\
-	./ft_strdel.c				\
-	./ft_strdup.c				\
-	./ft_strequ.c				\
-	./ft_strfill.c				\
-	./ft_striter.c				\
-	./ft_striteri.c				\
-	./ft_strjoin.c				\
-	./ft_strjoin_replace.c		\
-	./ft_strlcat.c				\
-	./ft_strlen.c				\
-	./ft_strmap.c				\
-	./ft_strmapi.c				\
-	./ft_strncat.c				\
-	./ft_strncmp.c				\
-	./ft_strncpy.c				\
-	./ft_strnequ.c				\
-	./ft_strnew.c				\
-	./ft_strnstr.c				\
-	./ft_strrchr.c				\
-	./ft_strsplit.c				\
-	./ft_strstr.c				\
-	./ft_strsub.c				\
-	./ft_strtrim2.c				\
-	./ft_strtrim.c				\
-	./ft_tabadd.c				\
-	./ft_tabdup.c				\
-	./ft_tablen.c				\
-	./ft_tabtolst.c				\
-	./ft_tabtrim.c				\
-	./ft_tolower.c				\
-	./ft_toupper.c				\
-
+SRC += ./ft_atoi.c
+SRC += ./ft_atol.c
+SRC += ./ft_atoll.c
+SRC += ./ft_bzero.c
+SRC += ./ft_close.c
+SRC += ./ft_closedir.c
+SRC += ./ft_exit.c
+SRC += ./ft_freetab.c
+SRC += ./ft_isalnum.c
+SRC += ./ft_isalpha.c
+SRC += ./ft_isascii.c
+SRC += ./ft_isdigit.c
+SRC += ./ft_isprint.c
+SRC += ./ft_itoa_base.c
+SRC += ./ft_itoa.c
+SRC += ./ft_lstaddback.c
+SRC += ./ft_lstadd.c
+SRC += ./ft_lstat.c
+SRC += ./ft_lstdel.c
+SRC += ./ft_lstdelone.c
+SRC += ./ft_lstiter.c
+SRC += ./ft_lstlast.c
+SRC += ./ft_lstlen.c
+SRC += ./ft_lstmap.c
+SRC += ./ft_lstnew.c
+SRC += ./ft_ltoa.c
+SRC += ./ft_memalloc.c
+SRC += ./ft_memccpy.c
+SRC += ./ft_memchr.c
+SRC += ./ft_memcmp.c
+SRC += ./ft_memcpy.c
+SRC += ./ft_memdel.c
+SRC += ./ft_memmove.c
+SRC += ./ft_memset.c
+SRC += ./ft_newmap.c
+SRC += ./ft_newtab.c
+SRC += ./ft_opendir.c
+SRC += ./ft_openfile.c
+SRC += ./ft_print_memory.c
+SRC += ./ft_print_ptr.c
+SRC += ./ft_printtab.c
+SRC += ./ft_putchar_base.c
+SRC += ./ft_putchar.c
+SRC += ./ft_putchar_fd.c
+SRC += ./ft_putendl.c
+SRC += ./ft_putendlcol.c
+SRC += ./ft_putendl_fd.c
+SRC += ./ft_putnbr.c
+SRC += ./ft_putnbrendl.c
+SRC += ./ft_putnbrendl_fd.c
+SRC += ./ft_putnbr_fd.c
+SRC += ./ft_putnbrspace.c
+SRC += ./ft_putnbrspace_fd.c
+SRC += ./ft_putspace.c
+SRC += ./ft_putspace_fd.c
+SRC += ./ft_putstr.c
+SRC += ./ft_putstrcol.c
+SRC += ./ft_putstrcol_fd.c
+SRC += ./ft_putstr_fd.c
+SRC += ./ft_rgbtohexa.c
+SRC += ./ft_strcat.c
+SRC += ./ft_strchr.c
+SRC += ./ft_strclr.c
+SRC += ./ft_strcmp.c
+SRC += ./ft_strcpy.c
+SRC += ./ft_strdel.c
+SRC += ./ft_strdup.c
+SRC += ./ft_strequ.c
+SRC += ./ft_strfill.c
+SRC += ./ft_striter.c
+SRC += ./ft_striteri.c
+SRC += ./ft_strjoin.c
+SRC += ./ft_strjoin_replace.c
+SRC += ./ft_strlcat.c
+SRC += ./ft_strlen.c
+SRC += ./ft_strmap.c
+SRC += ./ft_strmapi.c
+SRC += ./ft_strncat.c
+SRC += ./ft_strncmp.c
+SRC += ./ft_strncpy.c
+SRC += ./ft_strnequ.c
+SRC += ./ft_strnew.c
+SRC += ./ft_strnstr.c
+SRC += ./ft_strrchr.c
+SRC += ./ft_strsplit.c
+SRC += ./ft_strstr.c
+SRC += ./ft_strsub.c
+SRC += ./ft_strtrim2.c
+SRC += ./ft_strtrim.c
+SRC += ./ft_tabadd.c
+SRC += ./ft_tabdup.c
+SRC += ./ft_tablen.c
+SRC += ./ft_tabtolst.c
+SRC += ./ft_tabtrim.c
+SRC += ./ft_tolower.c
+SRC += ./ft_toupper.c
 
 OBJ= $(SRC:.c=.o)
 
 HEAD = -I ./
 
-FLAG = -Wall -Wextra -Werror -Weverything
+ifeq ($(UNAME), Linux)
+FLAGS = -Wall -Wextra -Werror -g3
+endif
 
-TRASH = Makefile~	\
-		./*.c~		\
-		./*.h~		\
+ifeq ($(UNAME), Darwin)
+FLAGS = -Wall -Wextra -Werror -g3 -Weverything
+endif
+
+TRASH += Makefile~
+TRASH += ./*.c~
+TRASH += ./*.h~
 
 WHERE =
 
