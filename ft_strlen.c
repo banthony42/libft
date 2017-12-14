@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:24:58 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/09 16:32:18 by banthony         ###   ########.fr       */
+/*   Updated: 2017/12/14 17:49:32 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ size_t	ft_strlen(const char *s)
 
 	i = 0;
 	if (s)
+	{
 		while (s[i])
 			i++;
+	}
 	return (i);
 }
