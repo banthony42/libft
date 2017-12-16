@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/12/12 18:05:07 by banthony         ###   ########.fr        #
+#    Updated: 2017/12/16 15:26:30 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -136,9 +136,9 @@ all: $(NAME)
 sanit:$(NAME_SANIT)
 
 $(NAME): $(SRC)
-	gcc $(FLAG) $(HEAD) -c $^
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@gcc $(FLAG) $(HEAD) -c $^
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 debug: $(SRC)
 	gcc $(FLAG) $(HEAD) -c $^ -g
@@ -146,9 +146,9 @@ debug: $(SRC)
 	ranlib $(NAME)
 
 $(NAME_SANIT): $(SRC)
-	gcc $(FLAG) $(HEAD) -c $^ -g3 -fsanitize=address
-	ar rc $(NAME_SANIT) $(OBJ)
-	ranlib $(NAME_SANIT)
+	@gcc $(FLAG) $(HEAD) -c $^ -g3 -fsanitize=address
+	@ar rc $(NAME_SANIT) $(OBJ)
+	@ranlib $(NAME_SANIT)
 
 cp:		#Copie la libft vers le PATH renseigne dans la var WHERE
 	cp $(NAME) $(WHERE)
@@ -160,10 +160,10 @@ fix:	#Compilation personnalise
 	gcc $(FLAG) $(HEAD) $(WHERE)
 
 clean:
-	rm -f $(OBJ)
-	rm -f $(TRASH)
+	@rm -f $(OBJ)
+	@rm -f $(TRASH)
 
 fclean: clean
-	rm -f $(NAME) $(NAME_SANIT)
+	@rm -f $(NAME) $(NAME_SANIT)
 
 re: fclean all
