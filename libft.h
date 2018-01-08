@@ -6,12 +6,13 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2017/11/08 16:12:38 by banthony         ###   ########.fr       */
+/*   Updated: 2017/12/16 20:08:37 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <string.h>
 # include <dirent.h>
 # include <sys/types.h>
@@ -44,7 +45,6 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-
 /*
 ** DEBUT Fonctions revue et ajout de commentaires
 */
@@ -55,7 +55,7 @@ long long			ft_atoll(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_close(int fd);
 int					ft_closedir(DIR *dir);
-void				ft_exit(char *exit_msg, int status)__attribute__((noreturn));
+void				ft_exit(char *exit_msg, int status);
 void				ft_freetab(char **tab);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -75,7 +75,8 @@ void				ft_print_memory(void *addr, size_t size);
 void				ft_putendlcol(char *color, char *str);
 void				ft_putstrcol(char *color, char *str);
 void				ft_putstrcol_fd(char const *s, int fd, char *color);
-int					ft_rgbtohexa(const int red, const int green, const int blue);
+int					ft_rgbtohexa(const int red, const int green
+								, const int blue);
 int					ft_tabtolst(char **tab, t_list **lst);
 char				*ft_itoa_base(int value, int base);
 char				*ft_strfill(char *str, char c);

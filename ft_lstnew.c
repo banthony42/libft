@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 12:17:54 by banthony          #+#    #+#             */
-/*   Updated: 2017/10/07 13:12:34 by banthony         ###   ########.fr       */
+/*   Updated: 2017/12/16 20:05:30 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,3 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	return (new);
 }
-
-
