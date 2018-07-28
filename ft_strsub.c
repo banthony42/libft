@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 16:21:23 by banthony          #+#    #+#             */
-/*   Updated: 2017/08/16 21:37:46 by banthony         ###   ########.fr       */
+/*   Updated: 2018/07/28 18:52:46 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (i < len)
 	{
-		str[i] = (char)s[start + i];
+		if ((start + i) <= ft_strlen(s))
+			str[i] = (char)s[start + i];
 		i++;
 	}
 	str[i] = '\0';

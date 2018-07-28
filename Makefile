@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2017/12/16 15:26:30 by banthony         ###   ########.fr        #
+#    Updated: 2018/07/28 19:00:49 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -110,6 +110,7 @@ SRC += ./ft_tabtolst.c
 SRC += ./ft_tabtrim.c
 SRC += ./ft_tolower.c
 SRC += ./ft_toupper.c
+SRC += ./get_next_line.c
 
 OBJ= $(SRC:.c=.o)
 
@@ -120,7 +121,7 @@ FLAGS = -Wall -Wextra -Werror -g3
 endif
 
 ifeq ($(UNAME), Darwin)
-FLAGS = -Wall -Wextra -Werror -g3 -Weverything
+FLAGS = -Wall -Wextra -Werror -Weverything
 endif
 
 TRASH += Makefile~
@@ -141,7 +142,7 @@ $(NAME): $(SRC)
 	@ranlib $(NAME)
 
 debug: $(SRC)
-	gcc $(FLAG) $(HEAD) -c $^ -g
+	gcc $(FLAG) $(HEAD) -c $^ -g3
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

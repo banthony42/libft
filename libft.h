@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2017/12/16 20:08:37 by banthony         ###   ########.fr       */
+/*   Updated: 2018/07/28 18:13:51 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,24 @@
 # include <sys/stat.h>
 # include "get_next_line.h"
 
-# define WHITE "\033[0m"
-# define BLACK "\033[30m"
-# define RED "\033[31m"
-# define GREEN "\033[32m"
-# define YELLOW "\033[33m"
-# define BLUE "\033[34m"
-# define PINK "\033[35m"
-# define CYAN "\033[36m"
-# define GREY "\033[37m"
+# define SH_WHITE "\033[0m"
+# define SH_BLACK "\033[30m"
+# define SH_RED "\033[31m"
+# define SH_GREEN "\033[32m"
+# define SH_YELLOW "\033[33m"
+# define SH_BLUE "\033[34m"
+# define SH_PINK "\033[35m"
+# define SH_CYAN "\033[36m"
+# define SH_GREY "\033[37m"
 
-# define B_WHITE "\033[40m"
-# define B_RED "\033[41m"
-# define B_GREEN "\033[42m"
-# define B_YELLOW "\033[43m"
-# define B_BLUE "\033[44m"
-# define B_PINK "\033[45m"
-# define B_CYAN "\033[46m"
-# define B_GREY "\033[47m"
+# define SH_BWHITE "\033[40m"
+# define SH_BRED "\033[41m"
+# define SH_BGREEN "\033[42m"
+# define SH_BYELLOW "\033[43m"
+# define SH_BBLUE "\033[44m"
+# define SH_BPINK "\033[45m"
+# define SH_BCYAN "\033[46m"
+# define SH_BGREY "\033[47m"
 
 typedef	struct		s_list
 {
@@ -92,6 +92,7 @@ void				ft_opendir(DIR **folder, const char *path);
 char				**ft_tabdup(char **tab);
 void				ft_printtab(char **tab,
 								void (*f)(const char *s), char *str);
+char				**ft_newtab_deprecated(int line, int col, int c);
 char				**ft_newtab(int line, int col, int c);
 t_list				*ft_lstlast(t_list *begin_list);
 size_t				ft_lstlen(t_list *begin_list);
