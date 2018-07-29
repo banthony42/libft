@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/13 18:14:26 by banthony          #+#    #+#             */
-/*   Updated: 2016/10/27 15:53:16 by banthony         ###   ########.fr       */
+/*   Updated: 2018/07/29 18:00:52 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static void	ft_skip_blank(char const *s, int *i)
 char		*ft_strtrim2(char const *s)
 {
 	char	*str;
+	char	*final;
 	int		i;
 	int		i2;
 
@@ -46,11 +47,10 @@ char		*ft_strtrim2(char const *s)
 		if (s[i] == ' ' || s[i] == '\t')
 			ft_skip_blank(s, &i);
 		else
-		{
-			str[i2++] = s[i];
-			i++;
-		}
+			str[i2++] = s[i++];
 	}
 	str[i2] = '\0';
-	return (ft_strdup(str));
+	final = ft_strsub(str, 0, ft_strlen(str));
+	ft_strdel(&str);
+	return (final);
 }
