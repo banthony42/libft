@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 19:25:09 by banthony          #+#    #+#             */
-/*   Updated: 2017/04/13 22:36:50 by banthony         ###   ########.fr       */
+/*   Updated: 2018/10/27 18:31:42 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,15 @@ void	ft_strjoin_replace(char **dest, char *src)
 	char *tmp;
 
 	tmp = NULL;
-	tmp = ft_strjoin(*dest, src);
-	ft_strdel(dest);
-	*dest = ft_strdup(tmp);
-	ft_strdel(&tmp);
+	if (dest == NULL || src == NULL)
+		return ;
+	if (*dest == NULL)
+		*dest = ft_strdup(src);
+	else
+	{
+		tmp = ft_strjoin(*dest, src);
+		ft_strdel(dest);
+		*dest = ft_strdup(tmp);
+		ft_strdel(&tmp);
+	}
 }
