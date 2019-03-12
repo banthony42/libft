@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2018/07/28 18:13:51 by banthony         ###   ########.fr       */
+/*   Updated: 2019/03/12 19:22:02 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <dirent.h>
 # include <sys/types.h>
 # include <sys/stat.h>
+# include <stdint.h>
 # include "get_next_line.h"
 
 # define SH_WHITE "\033[0m"
@@ -64,6 +65,8 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 char				*ft_itoa(int n);
 char				*ft_ltoa(long n);
+char				*ft_itoa_base_uint32(uint32_t value, int base);
+char				*ft_itoa_base_uint64(uint64_t value, int base);
 void				ft_print_ptr(void const *addr);
 /*
 ** FIN Fonctions revue et ajout de commentaires
@@ -85,7 +88,7 @@ void				ft_strjoin_replace(char **dest, char *src);
 char				**ft_tabadd(char **tab, char *elmt);
 size_t				ft_tablen(char **tab);
 int					**ft_newmap(int line, int col);
-char				*ft_strtrim2(char const *s);
+char				*ft_strtrim2(char const *s, int c);
 int					ft_lstat(char *path, struct stat *s_stat);
 int					ft_openfile(const char *file, int oflag);
 void				ft_opendir(DIR **folder, const char *path);

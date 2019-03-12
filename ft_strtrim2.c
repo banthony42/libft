@@ -6,7 +6,7 @@
 /*   By: banthony <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/13 18:14:26 by banthony          #+#    #+#             */
-/*   Updated: 2018/07/29 18:00:52 by banthony         ###   ########.fr       */
+/*   Updated: 2019/01/27 17:55:06 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,20 @@
 **	Si s ne contient pas d’espaces blancs au début ou à la fin,
 **	la fonction renvoie une copie de s.
 **	Si l’allocation echoue, la fonction renvoie NULL.
+**
+**	Le parametre int c, permet de remplacer les espaces blanc centraux
+**	par un caractere.
 */
 
-static void	ft_skip_blank(char const *s, int *i)
+static void	ft_skip_blank(char const *s, int *i, char *str, int c)
 {
+	if (str && c > 0)
+		*str = (char)c;
 	while (s[*i] == ' ' || s[*i] == '\t')
 		*i += 1;
 }
 
-char		*ft_strtrim2(char const *s)
+char		*ft_strtrim2(char const *s, int c)
 {
 	char	*str;
 	char	*final;
@@ -41,11 +46,11 @@ char		*ft_strtrim2(char const *s)
 		return (NULL);
 	if (!(str = (char *)ft_memalloc(ft_strlen(s) + 1)))
 		return (NULL);
-	ft_skip_blank(s, &i);
+	ft_skip_blank(s, &i, NULL, -1);
 	while (s[i])
 	{
 		if (s[i] == ' ' || s[i] == '\t')
-			ft_skip_blank(s, &i);
+			ft_skip_blank(s, &i, &str[i2++], c);
 		else
 			str[i2++] = s[i++];
 	}

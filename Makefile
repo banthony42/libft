@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2018/07/28 19:00:49 by banthony         ###   ########.fr        #
+#    Updated: 2019/03/12 19:25:42 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -27,6 +27,8 @@ SRC += ./ft_isalpha.c
 SRC += ./ft_isascii.c
 SRC += ./ft_isdigit.c
 SRC += ./ft_isprint.c
+SRC += ./ft_itoa_base_uint32.c
+SRC += ./ft_itoa_base_uint64.c
 SRC += ./ft_itoa_base.c
 SRC += ./ft_itoa.c
 SRC += ./ft_lstaddback.c
