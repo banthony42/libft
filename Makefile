@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2019/03/12 19:25:42 by banthony         ###   ########.fr        #
+#    Updated: 2019/10/18 15:40:36 by banthony         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -48,6 +48,8 @@ SRC += ./ft_memchr.c
 SRC += ./ft_memcmp.c
 SRC += ./ft_memcpy.c
 SRC += ./ft_memdel.c
+SRC += ./ft_memjoin.c
+SRC += ./ft_memjoin_replace.c
 SRC += ./ft_memmove.c
 SRC += ./ft_memset.c
 SRC += ./ft_newmap.c
