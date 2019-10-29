@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2019/10/18 15:40:50 by banthony         ###   ########.fr       */
+/*   Updated: 2019/10/29 14:10:41 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <stdint.h>
+# include <unistd.h>
 # include "get_next_line.h"
 
 # define SH_WHITE "\033[0m"
