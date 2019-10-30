@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2019/10/29 14:10:41 by banthony         ###   ########.fr       */
+/*   Updated: 2019/10/30 12:26:49 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void				ft_print_ptr(void const *addr);
 void				*ft_memjoin(void *dst, void *src, size_t dst_size,
 								size_t src_size);
 void				ft_memjoin_replace(void **dst, void *src, size_t *dst_size,
-									   size_t src_size);
+								size_t src_size);
 /*
 ** FIN Fonctions revue et ajout de commentaires
 */
