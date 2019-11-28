@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2019/10/30 12:26:49 by banthony         ###   ########.fr       */
+/*   Updated: 2019/11/22 15:32:10 by banthony         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@
 # define SH_PINK "\033[35m"
 # define SH_CYAN "\033[36m"
 # define SH_GREY "\033[37m"
+
+# define COLORIZE(COLOR, STR) COLOR STR SH_WHITE
 
 # define SH_BWHITE "\033[40m"
 # define SH_BRED "\033[41m"
