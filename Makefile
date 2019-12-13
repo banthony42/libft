@@ -6,7 +6,7 @@
 #    By: banthony <banthony@students.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 16:22:07 by banthony          #+#    #+#              #
-#    Updated: 2019/10/18 15:40:36 by banthony         ###   ########.fr        #
+#    Updated: 2019/12/13 15:27:36 by abara            ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -102,6 +102,7 @@ SRC += ./ft_strnequ.c
 SRC += ./ft_strnew.c
 SRC += ./ft_strnstr.c
 SRC += ./ft_strrchr.c
+SRC += ./ft_strsep.c
 SRC += ./ft_strsplit.c
 SRC += ./ft_strstr.c
 SRC += ./ft_strsub.c
@@ -109,6 +110,7 @@ SRC += ./ft_strtrim2.c
 SRC += ./ft_strtrim.c
 SRC += ./ft_tabadd.c
 SRC += ./ft_tabdup.c
+SRC += ./ft_tabiterif.c
 SRC += ./ft_tablen.c
 SRC += ./ft_tabtolst.c
 SRC += ./ft_tabtrim.c

@@ -6,7 +6,7 @@
 /*   By: banthony <banthony@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:04:33 by banthony          #+#    #+#             */
-/*   Updated: 2019/11/22 15:32:10 by banthony         ###   ########.fr       */
+/*   Updated: 2019/12/13 15:30:14 by abara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,9 @@ void				*ft_memjoin(void *dst, void *src, size_t dst_size,
 								size_t src_size);
 void				ft_memjoin_replace(void **dst, void *src, size_t *dst_size,
 								size_t src_size);
+char				**ft_strsep(char *s, char c);
+int					ft_tabiterif(char **tab, int (*f)(char *line, void *data), void *data);
+
 /*
 ** FIN Fonctions revue et ajout de commentaires
 */
